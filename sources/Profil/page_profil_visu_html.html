@@ -3,36 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Profil</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div>
     <h1>Profil :</h1>
 </div>
-<div>
-
-    <img src="chemin/vers/photo.jpg" alt="Photo de profil">
-
-    <ul>
-        <li>Nom: John Doe</li>
-        <li>Email: john.doe@example.com</li>
-        <li>Téléphone: 0123456789</li>
-    </ul>
-
-    <button onclick="modifierProfil()">Modifier</button>
+<div class="container">
+    <div>
+        <img src="" alt="Photo de profil">
+        <button onclick="modifierProfil()">Modifier</button>
+    </div>
+    <div class="profile-info">
+        <ul>
+            <li>Nom: </li>
+            <li>Email: </li>
+            <li>Téléphone: </li>
+        </ul>
+    </div>
 </div>
-<div>
+<div class="bio">
     <h2>Bio :</h2>
     <p>Texte de la bio de l'utilisateur...</p>
-
-    <button onclick="modifierBio()">Modifier Bio</button>
+    <a href="page_statistiques.php">Voir les statistiques</a>
 </div>
-<div>
+<div class="statistics">
     <h2>Historique Victoires/Défaites :</h2>
-
     <ul>
         <li>Victoire 1</li>
         <li>Défaite 1</li>
-
     </ul>
 </div>
 </body>
