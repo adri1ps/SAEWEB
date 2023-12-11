@@ -2,58 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Red Line Defense</title>
     <style>
-        /* Styles CSS pour le header */
-        header {
+    /* Styles CSS pour le header */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
       background-color: #f2f2f2;
       padding: 20px;
       text-align: center;
     }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
     .logo {
       width: 100px;
+    }
+    .title {
+      margin: 0;
     }
     nav ul {
       list-style-type: none;
       padding: 0;
       display: flex;
       justify-content: center;
+      margin-top: 10px;
     }
     nav ul li {
       margin-right: 20px;
     }
     form {
       display: flex;
-      justify-content: center;
+      align-items: center;
     }
     input[type="text"],
     button {
-      margin-right: 10px;
+      margin-left: 10px;
+      align-items: right;
     }
     .connexion-btn {
-      margin-left: auto;
+      margin-left: 10px;
     }
-    </style>
+  </style>
 </head>
 <body>
+
     <header>
-        <img src="/ressources/OnePieceLogo.png" alt="Logo du Wiki" class="logo">
-        <h1>Red Line Defense</h1>
+        <div class="header-content">
+            <img src="/ressources/OnePieceLogo.png" alt="Logo du Wiki" class="logo">
 
-        <nav>
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Sections</a></li>
-                <li><a href="#">Contribuer</a></li>
-                <!-- Ajoutez d'autres liens de navigation selon vos besoins -->
-            </ul>
-        </nav>
+            <div class="center">
+                <h1>Red Line Defense</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Sections</a></li>
+                        <li><a href="#">Contribuer</a></li>
+                        <!-- Ajoutez d'autres liens de navigation selon vos besoins -->
+                    </ul>
+                </nav>
+            </div>
 
-        <form action="#" method="get">
-            <input type="text" name="search" placeholder="Rechercher...">
-            <button type="submit">Rechercher</button>
-        </form>
-        <button class="connexion-btn">Connexion</button>
+
+            <button class="connexion-btn">Connexion</button>
+
+        </div>
     </header>
+
+<!-- Reste du contenu de la page -->
+<main>
+    <!-- Votre contenu wiki ici -->
+</main>
+<footer>
+    <div class="contact">
+        <h4>Nous contacter</h4>
+        <p>Par mail: redlinedefense@gmail.com</p>
+    </div>
+    <p>© RedLine 2023. Tous droits réservés</p>
+</footer>
+
 </body>
 </html>
