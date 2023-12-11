@@ -20,7 +20,8 @@
       align-items: center;
     }
     .logo {
-      width: 100px;
+      width: 150px;
+      padding: none;
     }
     .title {
       margin: 0;
@@ -39,14 +40,56 @@
       display: flex;
       align-items: center;
     }
+
     input[type="text"],
     button {
       margin-left: 10px;
       align-items: right;
     }
+
     .connexion-btn {
       margin-left: 10px;
     }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+
+    /* Styles pour le footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 30px;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .social-icon img {
+      width: 30px;
+      height: auto;
+      margin: 0 10px;
+    }
+
+    .footer-text {
+      margin: 5px 0;
+    }
+
   </style>
 </head>
 <body>
@@ -67,7 +110,6 @@
                 </nav>
             </div>
 
-
             <button class="connexion-btn">Connexion</button>
 
         </div>
@@ -82,8 +124,18 @@
         <h4>Nous contacter</h4>
         <p>Par mail: redlinedefense@gmail.com</p>
     </div>
-    <p>© RedLine 2023. Tous droits réservés</p>
+    <div class="footer-content">
+        <p>&copy; RedLine 2023. Tous droits réservés</p>
+        <div class="social-links">
+            <a href="https://www.pinterest.fr/" class="social-icon"><img src="/ressources/pinterest.png" alt="Pinterest"></a>
+            <a href="https://www.instagram.com/" class="social-icon"><img src="/ressources/instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/?locale=fr_FR" class="social-icon"><img src="/ressources/facebook.png" alt="Facebook"></a>
+            <a href="https://twitter.com/?lang=fr" class="social-icon"><img src="/ressources/twitter.png" alt="Twitter"></a>
+        </div>
+    </div>
+
     <img src="/ressources/RedLineDefense.png" alt="Nom du jeu" class="nomJeu">
+
 </footer>
 
 </body>
