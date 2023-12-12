@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="stylehome.css">
 </head>
 <body>
-
   <header>
     <div class="hautdepage">
     <div class="nav">
@@ -37,7 +36,6 @@
   </div>
   </header>
   <main>
-
     <div class="barreRecherche">
       <form action="#" method="get" class="formDeRecherche">
         <input type="text" name="search" placeholder="Rechercher...">
@@ -45,7 +43,24 @@
       </form>
     </div>
   </main>
-
-
+  <footer>
+    <ul class="listeFooter">
+      <li id="listeFooter1">À propos</li>
+      <li id="listeFooter2">FAQ</li>
+      <li id="listeFooter3">Contactez nous</li>
+      <li id="listeFooter4">Politique de confidentialité</li>
+    </ul>
+    <ul class="listeRéseaux">
+      <li id="liFB">
+        <a href="https://www.facebook.com/" target="_blank"><img src="/ressources/FacebookLogo.png" alt="Logo Facebook" class="imageRéseau"></a>
+      </li>
+      <li id="liINSTA">
+        <a href="https://www.instagram.com/arsanmessi/" target="_blank"><img src="/ressources/InstagramLogo.png" alt="Logo Instagram" class="imageRéseau"></a>
+      </li>
+      <li id="liYTB">
+        <a href="https://www.youtube.com/" target="_blank"><img src="/ressources/YoutubeLogo.png" alt="Logo YouTube" class="imageRéseau"></a>
+      </li>
+    </ul>
+  </footer>
 </body>
 </html>

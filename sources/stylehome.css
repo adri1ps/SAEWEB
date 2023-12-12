@@ -1,89 +1,11 @@
-
-
-
-
-
-
-.formDeRecherche {
-    justify-content: center;
-}
-input[type="text"], button {
-    margin-right: 10px;
-    font-family: cursive;
-}
-input[type="text"] {
-
-    width: 500px;
-}
-button {
-
-    width: 100px;
-    text-align: center;
-}
-.barreRecherche {
-
-
-}
-main {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-}
-
-
-
-
-
-body {
+html, body {
 
     background-color: antiquewhite;
-}
-
-
-
-
-
-.titre {
-
-    object-position: center;
+    height: 100%;
+    margin: 5px 0 0;
+    flex-direction: column;
     display: flex;
-    justify-content: center;
 }
-.lienTitre {
-
-}
-.imageTitre {
-
-    display: block;
-}
-
-
-
-
-
-
-
-.nav .liste {
-
-    list-style: none; /* Enlève les puces de la liste */
-    padding: 0; /* Enlève le padding par défaut */
-    display: flex; /* Active Flexbox pour les éléments de la liste */
-    gap: 20px; 
-}
-#menu1, #menu2, #menu3, #menu4, #menu5, #menu6, #menu7 {
-
-    text-decoration: none;
-    font-family: cursive;
-    color: black;
-}
-
-
-
-
-
-
 
 .hautdepage {
 
@@ -107,3 +29,88 @@ body {
     width: 70px;
     margin-left: 10px;
 }
+
+.nav .liste {
+
+    list-style: none; /* Enlève les puces de la liste */
+    padding: 0; /* Enlève le padding par défaut */
+    display: flex; /* Active Flexbox pour les éléments de la liste */
+    gap: 20px;
+}
+#menu1, #menu2, #menu3, #menu4, #menu5, #menu6, #menu7 {
+
+    text-decoration: none;
+    font-family: "Avenir Next";
+    color: black;
+}
+
+.titre {
+
+    object-position: center;
+    display: flex;
+    justify-content: center;
+}
+.lienTitre {
+
+}
+.imageTitre {
+
+    display: block;
+}
+
+.formDeRecherche {
+    justify-content: center;
+}
+input[type="text"], button {
+
+    margin-right: 10px;
+    font-family: Roboto, sans-serif;
+}
+input[type="text"] {
+
+    width: 500px;
+}
+button {
+
+    width: 100px;
+    text-align: center;
+}
+.barreRecherche {
+
+
+}
+main {
+
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    flex-grow: 1;
+}
+
+footer {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+.imageRéseau {
+
+    height: 40px;
+}
+.listeRéseaux {
+
+    list-style: none;
+    display: flex;
+    font-family: Roboto, sans-serif;
+    gap: 15px;
+}
+.listeFooter {
+
+    font-family: Roboto, sans-serif;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+
