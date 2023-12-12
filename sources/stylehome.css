@@ -1,0 +1,109 @@
+
+
+
+
+
+
+.formDeRecherche {
+    justify-content: center;
+}
+input[type="text"], button {
+    margin-right: 10px;
+    font-family: cursive;
+}
+input[type="text"] {
+
+    width: 500px;
+}
+button {
+
+    width: 100px;
+    text-align: center;
+}
+.barreRecherche {
+
+
+}
+main {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+
+
+
+
+body {
+
+    background-color: antiquewhite;
+}
+
+
+
+
+
+.titre {
+
+    object-position: center;
+    display: flex;
+    justify-content: center;
+}
+.lienTitre {
+
+}
+.imageTitre {
+
+    display: block;
+}
+
+
+
+
+
+
+
+.nav .liste {
+
+    list-style: none; /* Enlève les puces de la liste */
+    padding: 0; /* Enlève le padding par défaut */
+    display: flex; /* Active Flexbox pour les éléments de la liste */
+    gap: 20px; 
+}
+#menu1, #menu2, #menu3, #menu4, #menu5, #menu6, #menu7 {
+
+    text-decoration: none;
+    font-family: cursive;
+    color: black;
+}
+
+
+
+
+
+
+
+.hautdepage {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.images {
+
+    display: flex;
+    align-items: center;
+}
+.profil {
+
+    height: 50px;
+    margin-right: 10px;
+}
+.logo {
+
+    height: 40px;
+    width: 70px;
+    margin-left: 10px;
+}
