@@ -3,19 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Profil</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .profile-info {
+            text-align: right;
+            margin-top: 30px;
+        }
+        .pdp {
+            text-align: right;
+            margin-top: 30px;
+        }
+        .bio {
+            text-align: left;
+        }
+        .statistics {
+            text-align: left;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
 <div>
-    <h1>Profil :</h1>
+    <h1 style="text-align: left;">Profil :</h1>
 </div>
 <div class="container">
-    <div>
+    <div class="pdp">
         <img src="" alt="Photo de profil">
         <button onclick="modifierProfil()">Modifier</button>
     </div>
     <div class="profile-info">
         <ul>
+            <!-- TODO à finir avec le php -->
             <li>Nom: </li>
             <li>Email: </li>
             <li>Téléphone: </li>
@@ -29,6 +51,7 @@
 </div>
 <div class="statistics">
     <h2>Historique Victoires/Défaites :</h2>
+    <!-- TODO avec le php -->
     <ul>
         <li>Victoire 1</li>
         <li>Défaite 1</li>
