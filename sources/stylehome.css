@@ -40,7 +40,7 @@ html, body {
 #menu1, #menu2, #menu3, #menu4, #menu5, #menu6, #menu7 {
 
     text-decoration: none;
-    font-family: "Avenir Next";
+    font-family: Roboto, sans-serif;
     color: black;
 }
 
@@ -49,9 +49,6 @@ html, body {
     object-position: center;
     display: flex;
     justify-content: center;
-}
-.lienTitre {
-
 }
 .imageTitre {
 
@@ -74,10 +71,6 @@ button {
 
     width: 100px;
     text-align: center;
-}
-.barreRecherche {
-
-
 }
 main {
 
@@ -102,7 +95,6 @@ footer {
 
     list-style: none;
     display: flex;
-    font-family: Roboto, sans-serif;
     gap: 15px;
 }
 .listeFooter {
@@ -113,4 +105,8 @@ footer {
     gap: 30px;
 }
 
+#listeFooter1-2-3-4 {
 
+    text-decoration: none;
+    color: black;
+}

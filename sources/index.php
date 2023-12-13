@@ -1,11 +1,12 @@
 <?php
 
+include_once 'modules/mod_classement/mod_classement.php';
+
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
 
-    echo 'bonjour';
     $actionMenu = (isset($_GET['module'])) ? $_GET['module'] : 'index.php';
-    $module = 'null';
+    $module = null;
 
     switch ($actionMenu) {
 
@@ -35,14 +36,30 @@
             break;
         case 'mod_classement':
 
-            echo 'farid';
+            $module = New ModClassement();
+            break;
+        case 'mod_a_propos':
+
+            echo 'alo';
+            break;
+        case 'mod_faq':
+            
+            echo 'lkl';
+            break;
+        case 'mod_contact':
+
+            echo 'aloa';
+            break;
+        case 'mod_politique':
+                
+            echo 'lkla';
             break;
 
     }
 
 
 
-
+    include_once 'home.php';
 
 
 
