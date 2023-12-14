@@ -6,6 +6,7 @@ include_once '/home/etudiants/info/apons/local_html/SAEWEB/WEB/composants/comp_h
 include_once '/home/etudiants/info/apons/local_html/SAEWEB/WEB/composants/comp_titre/comp_titre.php';
 include_once '/home/etudiants/info/apons/local_html/SAEWEB/WEB/composants/comp_barreRecherche/comp_barreRecherche.php';
 
+
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
 
