@@ -1,0 +1,170 @@
+
+/* -------------NAV------------- */
+nav {
+ 
+    text-align: center;
+    padding: 30px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav a {
+
+    font-size: 30px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav a:hover {
+font-size: 35px;
+    color: #1f4dca;
+}
+
+
+/* ------------------------------ */
+
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(ellipse at center, #0d1d31 0%, #0c0d13 100%);
+ 
+
+}
+  
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 68vh;
+    width: 80%;
+    margin: 0 auto; /* Ajout de cette ligne pour centrer horizontalement */
+    background-color: #0c0d13;
+}
+
+
+
+
+/* -------------Form Connexion------------- */
+
+
+/* .container {
+    padding-top: 50px; 
+}
+
+.form-container {
+    background-color: rgba(96, 45, 109, 0.8);   
+    opacity: 10;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
+}
+form {
+    background-color: #f8f8f8;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    margin-left: 38%;
+    margin-bottom: 100px;
+    
+}
+
+fieldset {
+    border: 1px solid #83769b;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 25px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    font-size: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.signup-link {
+    font-size: 25px;
+    margin-top: 15px;
+    text-align: center;
+} */
+
+/* ------------------------------ */
+
+
+
+/* -------------Fotter------------- */
+footer {
+    font-size: 35px;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer img {
+    width: 300px; 
+    height: 50px; 
+    border-radius: 10px; 
+}
+
+.footer-container {
+    border-top: 1px solid #ffffff; 
+    padding-top: 10px; 
+    margin-top: 20px; 
+}
+
+
+/* ------------------------------ */
+
+
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
