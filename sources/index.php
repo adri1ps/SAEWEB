@@ -1,10 +1,10 @@
 <?php
 
 include_once 'modules/mod_classement/mod_classement.php';
-include_once '/home/etudiants/info/aabdi/local_html/SAEWEB/composants/comp_footer/comp_footer.php';
-include_once '/home/etudiants/info/aabdi/local_html/SAEWEB/composants/comp_header/comp_header.php';
-include_once '/home/etudiants/info/aabdi/local_html/SAEWEB/composants/comp_titre/comp_titre.php';
-include_once '/home/etudiants/info/aabdi/local_html/SAEWEB/composants/comp_barreRecherche/comp_barreRecherche.php';
+include_once '/home/etudiants/info/apons/local_html/SAEWEB/WEB/composants/comp_footer/comp_footer.php';
+include_once '/home/etudiants/info/apons/local_html/SAEWEB/WEB/composants/comp_header/comp_header.php';
+include_once '/home/etudiants/info/apons/local_html/SAEWEB/WEB/composants/comp_titre/comp_titre.php';
+include_once '/home/etudiants/info/apons/local_html/SAEWEB/WEB/composants/comp_barreRecherche/comp_barreRecherche.php';
 
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
