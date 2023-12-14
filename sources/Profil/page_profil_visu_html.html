@@ -4,58 +4,91 @@
     <meta charset="UTF-8">
     <title>Profil</title>
     <style>
-        .container {
+        body {
+            font-family: Roboto, sans-serif;
+            background-color: antiquewhite;
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-around;
         }
-        .profile-info {
-            text-align: right;
+
+        ul {
+            list-style-type: none;
+            padding: 0; /* Supprime la marge intérieure par défaut */
+            margin: 0; /* Supprime la marge extérieure par défaut */
+        }
+
+
+        .profile-nom-contact {
             margin-top: 30px;
         }
-        .pdp {
-            text-align: right;
-            margin-top: 30px;
+
+        .image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: lightgray;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        .bio {
+        .image img {
+            width: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .bio{
             text-align: left;
         }
-        .statistics {
-            text-align: left;
-            margin-top: 50px;
+
+        .historique {
+            position: relative;
+            width: 80%;
+            height: auto;
+            overflow: hidden;
+            bottom: 0;
+            left: 0;
+            padding: 20px;
+            background-color: lightgray;
+            border-radius: 20px;
         }
     </style>
 </head>
 <body>
-<div>
+<div class="coté-droit">
     <h1 style="text-align: left;">Profil :</h1>
-</div>
-<div class="container">
-    <div class="pdp">
-        <img src="" alt="Photo de profil">
-        <button onclick="modifierProfil()">Modifier</button>
+    <div class="bio">
+        <h2>Bio :</h2>
+        <p>Texte de la bio de l'utilisateur...</p>
+        <a href="page_statistiques.php">Voir les statistiques</a>
     </div>
-    <div class="profile-info">
+    <div class="historique">
+        <h2>Historique Victoires/Défaites :</h2>
+        <!-- TODO avec le php -->
+        <ul>
+            <li>Victoire 1</li>
+            <li>Défaite 1</li>
+        </ul>
+    </div>
+</div>
+<div class="coté-gauche">
+    <div class="pdp">
+        <div class="image">
+            <img src="?">
+        </div>
+        <button onclick="modifierPDP()">Modifier</button>
+    </div>
+    <div class="profile-nom-contact">
         <ul>
             <!-- TODO à finir avec le php -->
             <li>Nom: </li>
             <li>Email: </li>
             <li>Téléphone: </li>
+            <button onclick="modifierProfile()">Modifier</button>
         </ul>
     </div>
-</div>
-<div class="bio">
-    <h2>Bio :</h2>
-    <p>Texte de la bio de l'utilisateur...</p>
-    <a href="page_statistiques.php">Voir les statistiques</a>
-</div>
-<div class="statistics">
-    <h2>Historique Victoires/Défaites :</h2>
-    <!-- TODO avec le php -->
-    <ul>
-        <li>Victoire 1</li>
-        <li>Défaite 1</li>
-    </ul>
 </div>
 </body>
 </html>
