@@ -1,6 +1,10 @@
 <?php
 
 include_once 'modules/mod_classement/mod_classement.php';
+include_once 'modules/mod_inscription/mod_inscription.php';
+include_once 'modules/mod_forum/mod_forum.php';
+include_once 'modules/mod_infos/mod_infos.php';
+include_once 'modules/mod_évènement/mod_évènement.php';
 include_once '/home/etudiants/info/aabdi/local_html/SAEWEB/composants/comp_footer/comp_footer.php';
 include_once '/home/etudiants/info/aabdi/local_html/SAEWEB/composants/comp_header/comp_header.php';
 include_once '/home/etudiants/info/aabdi/local_html/SAEWEB/composants/comp_titre/comp_titre.php';
@@ -25,19 +29,19 @@ include_once '/home/etudiants/info/aabdi/local_html/SAEWEB/composants/comp_barre
             break;
         case 'mod_inscription':
 
-            echo 'ji';
+            $module = New ModInscription();
             break;
         case 'mod_infos':
 
-            echo 'bon';
+            $module = New ModInfos();
             break;
         case 'mod_forum':
 
-            echo 'bo';
+            $module = New ModForum();
             break;
         case 'mod_évènement':
 
-            echo 'j';
+            $module = New ModÉvènement();
             break;
         case 'mod_classement':
 
