@@ -10,6 +10,7 @@ include_once '/home/etudiants/info/aabdi/local_html/SAEWEB/composants/comp_barre
     ini_set('display_errors', 1);
 
     $actionMenu = (isset($_GET['module'])) ? $_GET['module'] : 'index.php';
+    $tampon = '';
     $module = null;
 
     switch ($actionMenu) {
@@ -61,14 +62,10 @@ include_once '/home/etudiants/info/aabdi/local_html/SAEWEB/composants/comp_barre
 
     }
 
-    $header = New CompHeader();
+    if ($module !== null) {
 
-    $titre = New CompTitre();
-
-    $barre = New CompBarreRecherche();
-
-    $footer = New CompFooter();
-
+        $tampon = $module -> getAffichage();
+    }
 
     include_once 'home.php';
 ?>

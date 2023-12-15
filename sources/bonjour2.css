@@ -17,7 +17,9 @@ html, body {
 
 /*barre de recherche*/
 
-.formDeRecherche {
+.barreRecherche {
+
+    display: flex;
     justify-content: center;
 }
 input[type="text"], button {
@@ -33,13 +35,6 @@ button {
 
     width: 100px;
     text-align: center;
-}
-main {
-
-    display: flex;
-    justify-content: center;
-    height: 50px;
-    flex-grow: 1;
 }
 
 
@@ -171,4 +166,12 @@ footer {
 .imageTitre {
 
     display: block;
+}
+
+
+
+
+.contenuPrincipal {
+    flex-grow: 1;
+    /* Autres styles nécessaires */
 }

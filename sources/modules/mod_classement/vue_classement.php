@@ -1,6 +1,6 @@
 <?php
 
-include_once 'vue_générique.php';
+include_once '/home/etudiants/info/aabdi/local_html/SAEWEB/sources/vue_générique.php';
 
 class VueClassement extends VueGenerique {
 

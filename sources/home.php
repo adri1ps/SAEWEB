@@ -2,18 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="bonjour.css">
+    <link rel="stylesheet" href="bonjour2.css">
     <title>Home Page</title>
 </head>
 <body>
 
-  <?php $header -> afficheHeader(); ?>
+  <?php 
 
-  <?php $titre -> afficheTitre(); ?>
+    $header = New CompHeader();
+    $header -> afficheHeader();
 
-  <?php $barre -> afficheBarre(); ?>
+    $titre = New CompTitre();
+    $titre -> afficheTitre();
 
-  <?php $footer -> afficheFooter(); ?>
+    $barre = New CompBarreRecherche();
+    $barre -> afficheBarre();?>
+
+    <div class="contenuPrincipal">
+      <?php echo $tampon; ?>
+    </div>
+    
+  <?php  
+
+    $footer = New CompFooter();
+    $footer -> afficheFooter(); 
+
+  ?>
+  
   
 </body>
 </html>

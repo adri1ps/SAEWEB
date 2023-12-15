@@ -28,5 +28,10 @@ class ContClassement {
                 break;
         }
     }
+
+    public function getAffichage() {
+
+        return $this -> vueClassement -> getAffichage();
+    }
 }
 ?>
