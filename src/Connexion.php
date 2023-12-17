@@ -6,9 +6,9 @@ class Connexion {
     
     public static function init_Connexion() {
    
-        $dsn = "mysql:host=database-etudiants.iut.univ-paris8.fr;dbname=dutinfopw201649";
-        $username = "dutinfopw201649";
-        $password = "tazyzuve";
+        $dsn = "mysql:host=localhost;dbname=ButInfo";
+        $username = "ButInfo";
+        $password = "12345";
         
         try {
             self::$bdd = new PDO($dsn, $username, $password);
