@@ -1,41 +1,32 @@
 <body>
-<div class="container">
-    <form id="formInscription" action="index.php?module=mod_inscription&&action=inscription" method="POST">
-        <h2>Inscription</h2>
-        <div class="form-group">
-            <label for="nom">Nom:</label>
-            <input type="text" id="nom" name="nom" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-            <label for="mdp">Mot de Passe:</label>
-            <input type="password" id="mdp" name="mdp" required>
-        </div>
-        <div class="form-group">
-            <label for="mdpConfirm">Confirmez le Mot de Passe:</label>
-            <input type="password" id="mdpConfirm" name="mdpConfirm" required>
-        </div>
-        <div class="form-group2">
-            <input type="checkbox" id="conditions" name="conditions" required>
-            <label for="conditions">J'accepte les termes et conditions</label>
-        </div>
-        <button type="submit">S'inscrire</button>
-    </form>
-    <div class="form-footer">
-        Vous avez déjà un compte ? <a href="page_de_connexion.php">Connexion</a>
+    <div class="container">
+        <form action="index.php?module=mod_connexion&action=loginUser" method="POST" id="formInscription">
+            <h2>Connexion</h2>
+            <ul>
+                <li class="form-group">
+                    <label for="loginConx">Login:</label>
+                    <input type="text" id="loginConx" name="loginConx" required />
+                </li>
+                <li class="form-group">
+                    <label for="mdpConx">Password:</label>
+                    <input type="password" id="mdpConx" name="mdpConx" required />
+                </li>
+            </ul>
+            <button type="submit">Se Connecter</button>
+            <div class="form-footer">
+                Pas encore inscrit ? <a href="index.php?module=mod_connexion&action=addUser">S'inscrire</a>
+            </div>
+        </form>
     </div>
-</div>
-<style>
+    <style>
+
 .container {
 
     background: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px; /* Taille maximale du conteneur */
+    max-width: 350px; /* Taille maximale du conteneur */
     margin: auto; /* Centrer le conteneur */
     display: flex;
     flex-direction: column;
@@ -50,6 +41,7 @@
     max-width: 400px; /* Taille maximale du formulaire */
     margin: auto; /* Centrer le formulaire si la page a une hauteur suffisante */
 }
+
 #formInscription h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -57,6 +49,7 @@
 }
 #formInscription .form-group {
     margin-bottom: 15px;
+    list-style: none;
 }
 #formInscription .form-group label {
     display: block;
@@ -70,16 +63,17 @@
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    outline: none; /* Enlève le contour bleu lors de la sélection */
+    outline: none; /* Enlève le contour bleu lors de la sélection*/
 }
-#formInscription .form-group2 input[type="checkbox"] {
-    margin-right: 10px;
+
+.container #formInscription ul {
+
+    padding-left: 0;
 }
-#formInscription .form-group2 {
-    display: flex;
-    font-family: Roboto, sans-serif;
-}
-#formInscription button {
+
+
+
+#formInscription button {   
     background-color: #007bff;
     color: white;
     padding: 10px 15px;
@@ -97,6 +91,7 @@
 
     font-family: Roboto, sans-serif;
     margin-top: 20px;
+    text-align: center;
 }
 .container .form-footer a {
 
@@ -107,8 +102,6 @@
 
     text-decoration: underline;
 }
-</style>
+    
+    </style>
 </body>
-
-
-
