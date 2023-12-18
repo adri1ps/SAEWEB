@@ -1,0 +1,70 @@
+<body>
+
+<div class="custom-select-wrapper">
+  <label for="filtreTypeEvent">Choisir un type d'Event</label>
+  <div class="custom-select">
+    <select name="filtre" id="filtreTypeEvent" onchange="filtrerEvenements()">
+      <option value="">-- Sélectionner --</option>
+      <option value="nouvelle_saison">Nouvelle Saison</option>
+      <option value="week-end_special">Week-end Spécial</option>
+      <option value="nouvelle_map">Nouvelle Map</option>
+      <option value="tournoi">Tournoi</option>
+      <option value="tente_ta_chance">Tente ta Chance</option>
+    </select>
+  </div>
+</div>
+<br>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet"/>
+
+<script>
+  function filtrerEvenements() {
+    var filtre = document.getElementById('filtreTypeEvent').value;
+    window.location.href = 'index.php?module=mod_évènement&action=' + filtre;
+  }
+</script>
+<style>
+
+  .custom-select-wrapper {
+    position: relative;
+    width: 300px;
+    font-family: sans-serif;
+  }
+  .custom-select {
+    position: relative;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  }
+  .custom-select:before {
+    content: "▼";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #333;
+  }
+  .custom-select select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none; /* Hide the default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: white;
+    font-size: 16px;
+    color: #333;
+  }
+  .custom-select select:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  .custom-select select option {
+    padding: 10px;
+  }
+
+</style>
+
+</body>
