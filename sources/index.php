@@ -4,12 +4,14 @@ include_once 'modules/mod_classement/mod_classement.php';
 include_once 'modules/mod_inscription/mod_inscription.php';
 include_once 'modules/mod_forum/mod_forum.php';
 include_once 'modules/mod_profil/mod_profil.php';
+include_once 'modules/mod_statistique/mod_statistique.php';
 include_once 'modules/mod_infos/mod_infos.php';
 include_once 'modules/mod_évènement/mod_évènement.php';
-include_once '/Users/arsanabdi/PhpstormProjects/SAEWEB/composants/comp_footer/comp_footer.php';
-include_once '/Users/arsanabdi/PhpstormProjects/SAEWEB/composants/comp_header/comp_header.php';
-include_once '/Users/arsanabdi/PhpstormProjects/SAEWEB/composants/comp_titre/comp_titre.php';
-include_once '/Users/arsanabdi/PhpstormProjects/SAEWEB/composants/comp_barreRecherche/comp_barreRecherche.php';
+include_once '../composants/comp_footer/comp_footer.php';
+include_once '../composants/comp_header/comp_header.php';
+include_once '../composants/comp_titre/comp_titre.php';
+include_once '../composants/comp_barreRecherche/comp_barreRecherche.php';
+include_once 'modules/mod_statistique/mod_statistique.php';
 
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
@@ -26,6 +28,10 @@ include_once '/Users/arsanabdi/PhpstormProjects/SAEWEB/composants/comp_barreRech
         case 'mod_profil':
 
             $module = New ModProfil();
+            break;
+        case 'mod_statistique':
+
+            $module = New ModStatistique();
             break;
         case 'mod_seConnecter':
 
