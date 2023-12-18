@@ -6,10 +6,10 @@ include_once 'modules/mod_forum/mod_forum.php';
 include_once 'modules/mod_profil/mod_profil.php';
 include_once 'modules/mod_infos/mod_infos.php';
 include_once 'modules/mod_évènement/mod_évènement.php';
-include_once '/Users/arsanabdi/PhpstormProjects/SAEWEB/composants/comp_footer/comp_footer.php';
-include_once '/Users/arsanabdi/PhpstormProjects/SAEWEB/composants/comp_header/comp_header.php';
-include_once '/Users/arsanabdi/PhpstormProjects/SAEWEB/composants/comp_titre/comp_titre.php';
-include_once '/Users/arsanabdi/PhpstormProjects/SAEWEB/composants/comp_barreRecherche/comp_barreRecherche.php';
+include_once '/Users/kherouarayan/PhpstormProjects/SAEWEB/composants/comp_footer/comp_footer.php';
+include_once '/Users/kherouarayan/PhpstormProjects/SAEWEB/composants/comp_header/comp_header.php';
+include_once '/Users/kherouarayan/PhpstormProjects/SAEWEB/composants/comp_titre/comp_titre.php';
+include_once '/Users/kherouarayan/PhpstormProjects/SAEWEB/composants/comp_barreRecherche/comp_barreRecherche.php';
 
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
