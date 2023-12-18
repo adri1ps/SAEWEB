@@ -2,7 +2,7 @@
 
 include_once 'Connexion.php';
 
-class ModeleÉvènement extends Connexion {
+class ModeleProfil extends Connexion {
 
     public function __construct() {
 

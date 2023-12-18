@@ -22,9 +22,12 @@ class ContInscription {
         
         $this -> vueInscription -> menu();
         switch($this -> actionInscription) {
-            case 'bienvenue' :
+            case 'form_inscription' :
                 
-                $this -> vueInscription -> bienvenue();
+                $this -> vueInscription -> formInscription();
+                break;
+            case 'inscription' :
+
                 break;
         }
     }

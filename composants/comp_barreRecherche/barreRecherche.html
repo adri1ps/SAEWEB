@@ -1,6 +1,42 @@
-<div class="barreRecherche">
-  <form action="#" method="get" class="formDeRecherche">
-    <input type="text" name="search" placeholder="Rechercher...">
-    <button type="submit">Rechercher</button>
-  </form>
-</div>
+<body>
+  <div class="barreRecherche">
+    <form action="#" method="get" class="formDeRecherche">
+      <input type="text" name="search" placeholder="Rechercher...">
+      <button type="submit">Rechercher</button>
+    </form>
+  </div>
+  <style>
+    .barreRecherche {
+      display: flex;
+      justify-content: center; /* Centrer la barre de recherche */
+      padding: 10px;
+    }
+    .formDeRecherche {
+      display: flex;
+      border: 1px solid #ddd; /* Bordure discrète */
+      border-radius: 25px; /* Bordures arrondies */
+      overflow: hidden; /* Garde les éléments enfants à l'intérieur des bordures arrondies */
+    }
+    .formDeRecherche input[type="text"] {
+      border: none;
+      padding: 10px 20px;
+      width: 300px; /* Largeur spécifique ou en pourcentage */
+      border-radius: 25px 0 0 25px; /* Bordures arrondies à gauche */
+      outline: none; /* Enlève le contour de focus */
+    }
+    .formDeRecherche button {
+      border: none;
+      background-color: #4CAF50; /* Couleur de fond */
+      color: white; /* Couleur du texte */
+      padding: 10px 20px;
+      cursor: pointer; /* Change le curseur en main */
+      border-radius: 0 25px 25px 0; /* Bordures arrondies à droite */
+      transition: background-color 0.3s; /* Transition pour l'effet de survol */
+    }
+    .formDeRecherche button:hover {
+      background-color: #45a049; /* Couleur de fond au survol */
+    }
+  </style>
+
+</body>
+

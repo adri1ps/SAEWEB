@@ -1,6 +1,6 @@
 <?php
 
-include_once 'cont_évènement.php';
+include_once 'cont_evenement.php';
 include_once 'Connexion.php';
 
 class ModÉvènement {
@@ -11,7 +11,7 @@ class ModÉvènement {
 
         Connexion :: initConnexion();
 
-        $this -> contÉvènement = new ContÉvènement();
+        $this -> contÉvènement = new ContEvenement();
         $this -> contÉvènement -> exec();
     }
 

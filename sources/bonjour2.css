@@ -7,171 +7,153 @@ html, body {
     display: flex;
 }
 
-
-
-
-
-
-
-
-
-/*barre de recherche*/
-
-.barreRecherche {
-
-    display: flex;
-    justify-content: center;
-}
-input[type="text"], button {
-
-    margin-right: 10px;
-    font-family: Roboto, sans-serif;
-}
-input[type="text"] {
-
-    width: 500px;
-}
-button {
-
-    width: 100px;
-    text-align: center;
-}
-
-
-
-
-
-
-
-
-
-
-
-/*footer*/
-
-.listeRéseaux {
-
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-.listeFooter {
-
-    font-family: Roboto, sans-serif;
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-#listeFooter1-2-3-4 {
-
-    text-decoration: none;
-    color: white;
-}
-footer {
-    background-color: #333;
-    padding: 20px;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    gap: 40px;
-}
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 10px;
-    margin-left: 30px;
-}
-.social-links {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-.social-icon img {
-    width: 30px;
-    height: auto;
-    margin: 10px;
-}
-.footer-text {
-    margin: 5px 0;
-}
-.nomJeu {
-
-    height: 90px;
-}
-
-
-
-
-
-
-
-
-
-/*header*/
-
-.hautdepage {
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.images {
-
-    display: flex;
-    align-items: center;
-}
-.profil {
-
-    height: 50px;
-    margin-right: 10px;
-}
-.logo {
-
-    height: 60px;
-    width: auto;
-    margin-left: 10px;
-}
-.nav .liste {
-
-    list-style: none; /* Enlève les puces de la liste */
-    padding: 0; /* Enlève le padding par défaut */
-    display: flex; /* Active Flexbox pour les éléments de la liste */
-    gap: 20px;
-}
-#menu1, #menu2, #menu3, #menu4, #menu5, #menu6, #menu7 {
-
-    text-decoration: none;
-    font-family: Roboto, sans-serif;
-    color: black;
-}
-
-
-
-
-
-
-
-
-
-/*titre*/
-
-.titre {
-
-    object-position: center;
-    display: flex;
-    justify-content: center;
-}
-.imageTitre {
-
-    display: block;
-}
-
-
-
-
 .contenuPrincipal {
     flex-grow: 1;
-    /* Autres styles nécessaires */
+
 }
+
+
+                                    /*FORMULAIRE D'INSCRIPTION*/
+.container {
+
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Taille maximale du conteneur */
+    margin: auto; /* Centrer le conteneur */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#formInscription {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Taille maximale du formulaire */
+    margin: auto; /* Centrer le formulaire si la page a une hauteur suffisante */
+}
+#formInscription h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Roboto, sans-serif;
+}
+#formInscription .form-group {
+    margin-bottom: 15px;
+}
+#formInscription .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: Roboto, sans-serif;
+}
+#formInscription .form-group input[type="text"],
+#formInscription .form-group input[type="email"],
+#formInscription .form-group input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none; /* Enlève le contour bleu lors de la sélection */
+}
+#formInscription .form-group2 input[type="checkbox"] {
+    margin-right: 10px;
+}
+#formInscription .form-group2 {
+    display: flex;
+    font-family: Roboto, sans-serif;
+}
+#formInscription button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Le bouton occupe toute la largeur */
+    margin-top: 10px;
+    outline: none; /* Enlève le contour bleu lors de la sélection */
+}
+#formInscription button:hover {
+    background-color: #0056b3;
+}
+.container .form-footer {
+
+    font-family: Roboto, sans-serif;
+    margin-top: 20px;
+}
+.container .form-footer a {
+
+    color: #007bff;
+    text-decoration: none;
+}
+.container .form-footer a:hover {
+
+    text-decoration: underline;
+}
+
+                                /*FILTRE DE LA PAGE EVENT*/
+
+
+                                /*AFFICHAGE DES EVENTS DE LA PAGE EVENT*/
+
+
+/*.data-entry {
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    background-color: white;
+}
+.data-value-container {
+    margin-left: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-left: 3px solid #007bff;
+}
+.data-sub-entry {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+.data-sub-key {
+    color: #555;
+    margin-right: 10px;
+    font-weight: bold;
+}
+.data-sub-value {
+    color: #666;
+}*/
+
+.data-entry {
+    border: 1px solid #ddd; /* Ajoute une bordure pour mieux voir le contour */
+    margin: 10px;
+    padding: 10px;
+    width: calc(100% - 20px); /* Prend la largeur totale moins la marge */
+    box-sizing: border-box; /* Inclut la bordure et le padding dans la largeur */
+}
+
+.data-value-container {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f7f7f7; /* Un fond différent pour distinguer les sous-entrées */
+}
+
+.data-sub-entry {
+    margin: 5px 0; /* Espacement entre les sous-entrées */
+}
+
+.data-sub-key {
+    font-weight: bold; /* Met en gras les clés des données */
+}
+
+.data-sub-value {
+    margin-left: 5px; /* Espacement entre la clé et la valeur */
+}
+
+
+
+
+
+
+
+

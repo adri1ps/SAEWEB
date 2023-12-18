@@ -6,7 +6,6 @@ class CompFooter {
 
     public function __construct() {
 
-
         include_once 'footer.html';
     }
 
