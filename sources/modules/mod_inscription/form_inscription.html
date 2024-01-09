@@ -1,114 +1,100 @@
-<body>
 <div class="container">
     <form id="formInscription" action="index.php?module=mod_inscription&&action=inscription" method="POST">
-        <h2>Inscription</h2>
+        <h2>INSCRIPTION</h2>
         <div class="form-group">
-            <label for="nom">Nom:</label>
-            <input type="text" id="nom" name="nom" required>
+            <label for="nomDeInscription">nom:</label>
+            <input type="text" id="nom" name="nomInsc" required placeholder="lewinner44">
         </div>
         <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <label for="emailDeInscription">email:</label>
+            <input type="email" id="email" name="emailInsc" required placeholder="lewinner44@gmail.com">
         </div>
         <div class="form-group">
-            <label for="mdp">Mot de Passe:</label>
-            <input type="password" id="mdp" name="mdp" required>
+            <label for="mdpDeInscription">mot de passe:</label>
+            <input type="password" id="mdp" name="mdpInsc" required placeholder="************">
         </div>
         <div class="form-group">
-            <label for="mdpConfirm">Confirmez le Mot de Passe:</label>
-            <input type="password" id="mdpConfirm" name="mdpConfirm" required>
+            <label for="mdpConfirmDeInscription">confirmez le mot de passe:</label>
+            <input type="password" id="mdpConfirm" name="mdpConfirmInsc" required placeholder="************">
         </div>
         <div class="form-group2">
-            <input type="checkbox" id="conditions" name="conditions" required>
-            <label for="conditions">J'accepte les termes et conditions</label>
+            <input type="checkbox" id="conditions" name="conditionsInsc" required>
+            <label for="conditionsDeInscription">J'accepte les termes et conditions</label>
         </div>
         <button type="submit">S'inscrire</button>
+        <div class="form-footer">
+            Vous avez déjà un compte ? <a href="index.php?module=mod_connexion">Connexion</a>
+        </div>
     </form>
-    <div class="form-footer">
-        Vous avez déjà un compte ? <a href="page_de_connexion.php">Connexion</a>
-    </div>
 </div>
 <style>
-.container {
 
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px; /* Taille maximale du conteneur */
-    margin: auto; /* Centrer le conteneur */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    #formInscription {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px; /* Taille maximale du formulaire */
+        margin: auto; /* Centrer le formulaire si la page a une hauteur suffisante */
+    }
+    #formInscription h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-family: Roboto, sans-serif;
+    }
+    #formInscription .form-group {
+        margin-bottom: 15px;
+    }
+    #formInscription .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-family: Roboto, sans-serif;
+    }
+    #formInscription .form-group input[type="text"],
+    #formInscription .form-group input[type="email"],
+    #formInscription .form-group input[type="password"] {
+        width: 90%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        outline: none; /* Enlève le contour bleu lors de la sélection */
+    }
+    #formInscription .form-group2 input[type="checkbox"] {
+        margin-right: 10px;
+    }
+    #formInscription .form-group2 {
+        display: flex;
+        font-family: Roboto, sans-serif;
+    }
+    #formInscription button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%; /* Le bouton occupe toute la largeur */
+        margin-top: 10px;
+        outline: none; /* Enlève le contour bleu lors de la sélection */
+    }
+    #formInscription button:hover {
+        background-color: #0056b3;
+    }
+    .container .form-footer {
 
-}
-#formInscription {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px; /* Taille maximale du formulaire */
-    margin: auto; /* Centrer le formulaire si la page a une hauteur suffisante */
-}
-#formInscription h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: Roboto, sans-serif;
-}
-#formInscription .form-group {
-    margin-bottom: 15px;
-}
-#formInscription .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-family: Roboto, sans-serif;
-}
-#formInscription .form-group input[type="text"],
-#formInscription .form-group input[type="email"],
-#formInscription .form-group input[type="password"] {
-    width: 90%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    outline: none; /* Enlève le contour bleu lors de la sélection */
-}
-#formInscription .form-group2 input[type="checkbox"] {
-    margin-right: 10px;
-}
-#formInscription .form-group2 {
-    display: flex;
-    font-family: Roboto, sans-serif;
-}
-#formInscription button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%; /* Le bouton occupe toute la largeur */
-    margin-top: 10px;
-    outline: none; /* Enlève le contour bleu lors de la sélection */
-}
-#formInscription button:hover {
-    background-color: #0056b3;
-}
-.container .form-footer {
+        font-family: Roboto, sans-serif;
+        margin-top: 20px;
+    }
+    .container .form-footer a {
 
-    font-family: Roboto, sans-serif;
-    margin-top: 20px;
-}
-.container .form-footer a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    .container .form-footer a:hover {
 
-    color: #007bff;
-    text-decoration: none;
-}
-.container .form-footer a:hover {
-
-    text-decoration: underline;
-}
+        text-decoration: underline;
+    }
 </style>
-</body>
 
 
 

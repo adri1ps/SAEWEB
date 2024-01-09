@@ -1,6 +1,6 @@
 <?php
 
-include_once 'vue_générique.php';
+include_once 'vue_generique.php';
 
 class VueInscription extends VueGenerique {
 
@@ -10,6 +10,7 @@ class VueInscription extends VueGenerique {
 
     public function menu() {
 
+        include_once 'form_inscription.html';
     }
 
     public function formInscription() {

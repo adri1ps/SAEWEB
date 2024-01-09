@@ -1,6 +1,6 @@
 <?php
 
-include_once 'vue_générique.php';
+include_once 'vue_generique.php';
 
 class VueClassement extends VueGenerique {
 
@@ -10,12 +10,16 @@ class VueClassement extends VueGenerique {
 
     public function menu() {
 
-        echo '<br><a href="index.php?module=mod_classement&&action=bienvenue">Action Bienvenue</a><br>';
+        include_once 'page_classement.html';
     }
 
     public function bienvenue() {
-        
+
         echo 'Bienvenue';
     }
+
+    function affiche_liste($tab) {
+
+
+    }
 }
-?>

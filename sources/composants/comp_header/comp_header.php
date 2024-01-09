@@ -7,11 +7,11 @@ class CompHeader {
 
         if (isset($_SESSION['user'])) {
 
-            include_once 'headerConnecté.html';
+            include_once 'headerCo.html';
         }
         else {
 
-            include_once 'headerDéconnecté.html';
+            include_once 'headerDeco.html';
         }
     }
 
@@ -20,6 +20,3 @@ class CompHeader {
         echo $this -> header;
     }
 }
-
-
-?>

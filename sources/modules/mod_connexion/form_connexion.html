@@ -1,39 +1,27 @@
-<body>
-    <div class="container">
-        <form action="index.php?module=mod_connexion&action=loginUser" method="POST" id="formInscription">
-            <h2>Connexion</h2>
-            <ul>
-                <li class="form-group">
-                    <label for="loginConx">Login:</label>
-                    <input type="text" id="loginConx" name="loginConx" required />
-                </li>
-                <li class="form-group">
-                    <label for="mdpConx">Password:</label>
-                    <input type="password" id="mdpConx" name="mdpConx" required />
-                </li>
-            </ul>
-            <button type="submit">Se Connecter</button>
-            <div class="form-footer">
-                Pas encore inscrit ? <a href="index.php?module=mod_connexion&action=addUser">S'inscrire</a>
-            </div>
-        </form>
-    </div>
-    <style>
 
-.container {
+<div class="container">
+    <form action="index.php?module=mod_connexion&action=connexion" method="POST" id="formConnexion">
+        <h2>CONNEXION</h2>
+        <ul>
+            <li class="form-group">
+                <label for="loginDeConnexion">login:</label>
+                <input type="text" id="loginDeConnexion" name="login" required placeholder="lewinner44"/>
+            </li>
+            <li class="form-group">
+                <label for="mdpDeConnexion">password:</label>
+                <input type="password" id="mdpDeConnexion" name="mdp" required placeholder="************"/>
+            </li>
+        </ul>
+        <button type="submit">Se Connecter</button>
+        <div class="form-footer">
+            Pas encore inscrit ? <a href="index.php?module=mod_inscription">S'inscrire</a>
+        </div>
+    </form>
+</div>
+<style>
 
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 350px; /* Taille maximale du conteneur */
-    margin: auto; /* Centrer le conteneur */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-}
-#formInscription {
+#formConnexion {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -42,23 +30,23 @@
     margin: auto; /* Centrer le formulaire si la page a une hauteur suffisante */
 }
 
-#formInscription h2 {
+#formConnexion h2 {
     text-align: center;
     margin-bottom: 20px;
     font-family: Roboto, sans-serif;
 }
-#formInscription .form-group {
+#formConnexion .form-group {
     margin-bottom: 15px;
     list-style: none;
 }
-#formInscription .form-group label {
+#formConnexion .form-group label {
     display: block;
     margin-bottom: 5px;
     font-family: Roboto, sans-serif;
 }
-#formInscription .form-group input[type="text"],
-#formInscription .form-group input[type="email"],
-#formInscription .form-group input[type="password"] {
+#formConnexion .form-group input[type="text"],
+#formConnexion .form-group input[type="email"],
+#formConnexion .form-group input[type="password"] {
     width: 90%;
     padding: 10px;
     border: 1px solid #ddd;
@@ -66,14 +54,14 @@
     outline: none; /* Enlève le contour bleu lors de la sélection*/
 }
 
-.container #formInscription ul {
+.container #formConnexion ul {
 
     padding-left: 0;
 }
 
 
 
-#formInscription button {   
+#formConnexion button {
     background-color: #007bff;
     color: white;
     padding: 10px 15px;
@@ -84,7 +72,7 @@
     margin-top: 10px;
     outline: none; /* Enlève le contour bleu lors de la sélection */
 }
-#formInscription button:hover {
+#formConnexion button:hover {
     background-color: #0056b3;
 }
 .container .form-footer {
@@ -103,5 +91,4 @@
     text-decoration: underline;
 }
     
-    </style>
-</body>
+</style>

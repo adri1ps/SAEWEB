@@ -1,6 +1,6 @@
 <?php
 
-include_once 'vue_générique.php';
+include_once 'vue_generique.php';
 
 class VueForum extends VueGenerique {
 
