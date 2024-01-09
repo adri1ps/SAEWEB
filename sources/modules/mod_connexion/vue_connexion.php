@@ -1,6 +1,6 @@
 <?php
 
-include_once 'vue_générique.php';
+include_once 'vue_generique.php';
 
 class VueConnexion extends VueGenerique {
 
@@ -13,4 +13,3 @@ class VueConnexion extends VueGenerique {
         include_once 'form_connexion.html';
     }
 }
-?>

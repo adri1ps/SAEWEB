@@ -9,5 +9,3 @@ class ModeleProfil extends Connexion {
 
     }
 }
-
-?>

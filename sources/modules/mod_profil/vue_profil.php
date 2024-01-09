@@ -1,6 +1,6 @@
 <?php
 
-include_once 'vue_générique.php';
+include_once 'vue_generique.php';
 
 class VueProfil extends VueGenerique {
 
@@ -10,6 +10,7 @@ class VueProfil extends VueGenerique {
 
     public function menu() {
 
+        include_once 'page_profil_visu.html';
     }
 
     public function page_profil() {
@@ -17,4 +18,3 @@ class VueProfil extends VueGenerique {
         include_once 'page_profil_visu.html';
     }
 }
-?>

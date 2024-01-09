@@ -26,6 +26,26 @@ class ContClassement {
                 
                 $this -> vueClassement -> bienvenue();
                 break;
+            case 'nbKills':
+
+                $this -> vueClassement -> affiche_liste($this -> modeleClassement -> classementJoueursParNbKills());
+                break;
+            case 'tempsDeJeu':
+
+                $this -> vueClassement -> affiche_liste($this -> modeleClassement -> classementJoueursParTempsJeu());
+                break;
+            case 'ratio':
+
+                $this -> vueClassement -> affiche_liste($this -> modeleClassement -> classementJoueursParRatio());
+                break;
+            case 'nbMorts':
+
+                $this -> vueClassement -> affiche_liste($this -> modeleClassement -> classementJoueursParNbMorts());
+                break;
+            case 'nbPartiesJouees':
+
+                $this -> vueClassement -> affiche_liste($this -> modeleClassement -> classementJoueursParNbPartiesJouees());
+                break;
         }
     }
 
@@ -34,4 +54,3 @@ class ContClassement {
         return $this -> vueClassement -> getAffichage();
     }
 }
-?>

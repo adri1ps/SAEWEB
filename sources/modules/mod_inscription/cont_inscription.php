@@ -22,12 +22,10 @@ class ContInscription {
         
         $this -> vueInscription -> menu();
         switch($this -> actionInscription) {
-            case 'form_inscription' :
-                
-                $this -> vueInscription -> formInscription();
-                break;
             case 'inscription' :
 
+                $this -> modeleInscription -> creationUtilisateur();
+                $this -> connexion();
                 break;
         }
     }
@@ -36,5 +34,25 @@ class ContInscription {
 
         return $this -> vueInscription -> getAffichage();
     }
+
+    public function deconnexion() {
+
+        unset($_SESSION['utilisateur']);
+    }
+
+    public function addUser() {
+
+        $bool = $this -> modeleConnexion -> createUser();
+        if($bool) {
+            echo "Insertion valide.";
+        }else {
+            echo "Insertion invalide.";
+        }
+    }
+
+    public function connexion() {
+
+
+        $_SESSION['user'] = $_POST['nomInsc'];
+    }
 }
-?>

@@ -19,13 +19,25 @@ class ContInfos {
     }
 
     public function exec() {
-        
-        $this -> vueInfos -> menu();
+
         switch($this -> actionInfos) {
-            case 'bienvenue' :
-                
-                $this -> vueInfos -> bienvenue();
+            case 'tour':
+
+                $this -> vueInfos -> afficheInfosDesTours($this -> modeleInfos -> retourneInfosDesTours());
                 break;
+
+            case 'projectile':
+
+                break;
+
+            case 'soldat':
+
+                break;
+            default:
+
+                $this -> vueInfos -> menu();
+                break;
+
         }
     }
 

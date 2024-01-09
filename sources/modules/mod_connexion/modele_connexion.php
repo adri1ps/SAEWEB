@@ -9,41 +9,24 @@ class ModeleConnexion extends Connexion {
 
     }
 
-    public function createUser() {
-        if (isset($_POST['user_name']) && isset($_POST['user_password'])) {
-            $user_name = htmlspecialchars($_POST['user_name']);
-            $user_password = htmlspecialchars($_POST['user_password']);
-    
-           
-            $hashed_password = password_hash($user_password, PASSWORD_DEFAULT);
-    
-            
-            $query = self::$bdd->prepare("INSERT INTO utilisateur(login, mdp) VALUES(?, ?)");
-            
-            if ($query->execute(array($user_name, $hashed_password))) {
-                return true;
-            } else {
-                
-                return false;
-            }
-        } else {
-            return false;
-        }
-    }
+    public function autorisationConnexion() {
 
-    public function verifyConnection() {
-        if (isset($_POST['loginConx']) && isset($_POST['mdpConx'])) {
-            $user_name = htmlspecialchars($_POST['loginConx']);
-            $user_password = htmlspecialchars($_POST['mdpConx']);
+        if ($this -> loginEtMdpPasVide()) {
+
+            $user_name = htmlspecialchars($_POST['login']);
+            $user_password = htmlspecialchars($_POST['mdp']);
     
            
-            $query = self::$bdd->prepare("SELECT login, mdp FROM utilisateur WHERE login = ?");
-            $query->execute(array($user_name));
-            $row = $query->fetch();
+            $query = self :: $bdd -> prepare("SELECT mot_de_passe FROM Joueurs WHERE nom = :login");
+            $query -> bindParam(':login', $user_name, PDO::PARAM_STR);
+            $query -> execute();
+
+            $row = $query -> fetch(PDO::FETCH_ASSOC);
+            $mdpHashed = $row['mot_de_passe'];
     
-            if ($row && password_verify($user_password, $row['mdp'])) {
+            if ($row && password_verify($user_password, $mdpHashed)) {
     
-                $_SESSION['loginConx'] = $_POST['loginConx'];
+                $_SESSION['user'] = $user_name;
                 return true; 
             }
         }
@@ -51,7 +34,11 @@ class ModeleConnexion extends Connexion {
         return false;
     }
 
+    public function loginEtMdpPasVide() {
+
+        return !empty($_POST['login']) && !empty($_POST['mdp']);
+    }
+
 
 }
 
-?>

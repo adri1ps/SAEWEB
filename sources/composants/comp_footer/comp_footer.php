@@ -1,6 +1,5 @@
 <?php
 
-
 class CompFooter {
     private $footer;
 
@@ -14,6 +13,3 @@ class CompFooter {
         echo $this -> footer;
     }
 }
-
-
-?>
