@@ -100,7 +100,7 @@ if ($module !== null) {
         </div>
 
         <!-- Utilisez 'justify-content-center' pour centrer le bouton, et 'mx-auto' pour appliquer une marge automatique sur les côtés -->
-        <div id="boutonRetour" class="fixed-top" style="top: 150px; left: 0; right: 0; z-index: 1029;">
+        <div id="boutonRetour" class="fixed-top d-flex" style="top: 150px; left: 0; right: 0; z-index: 1029; width: 100%;">
             <div class="row justify-content-center">
                 <div class="col-xl-1">
                     <?php $compBouton = New CompBouton(); $compBouton->afficheBouton(); ?>
@@ -110,7 +110,7 @@ if ($module !== null) {
     </header>
 
 
-    <main style="flex: 1 0 auto; margin-top: 300px; margin-bottom: 100px;" class="d-flex flex-column align-items-center">
+    <main style="flex: 1 0 auto; margin-top: 300px; margin-bottom: 300px;" class="d-flex flex-column align-items-center">
         <?php echo $tampon;?>
     </main>
 
@@ -119,23 +119,22 @@ if ($module !== null) {
         <?php $compFooter = New CompFooter();    $compFooter -> afficheFooter();?>
     </footer>
 
-<script>
-    // Ecouteur d'événements pour le scroll
+    <script>
     window.addEventListener('scroll', function() {
         var bouton = document.getElementById('boutonRetour');
-        var offset = 100; // La hauteur à laquelle le bouton "Retour" est fixé initialement
-        var boutonHeight = bouton.offsetHeight; // Hauteur du bouton
+        // Utilisez une valeur de défilement spécifique ou calculez-la en fonction du contenu de votre page.
+        var seuilDeDefilement = 80; // Par exemple, la hauteur de votre en-tête plus un peu de marge.
 
-        // Vérifiez la position du scroll
-        if (window.pageYOffset > offset + boutonHeight) {
-            // Si l'utilisateur a défilé au-delà du bouton, masquez-le
-            bouton.style.display = 'none';
+        if (window.pageYOffset > seuilDeDefilement) {
+            // Si l'utilisateur a défilé au-delà du seuil, masquez le bouton
+            bouton.style.visibility = 'hidden';
         } else {
             // Sinon, affichez-le
-            bouton.style.display = 'block';
+            bouton.style.visibility = 'visible';
         }
     });
 </script>
+
 
 </body>
 </html>
