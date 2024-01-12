@@ -30,7 +30,7 @@ class VueEvenement extends VueGenerique {
                 echo "<img class='card-img-top' src='" . htmlspecialchars($cheminImages . $event['logo']) . "' alt='Logo de l'événement'>";
             }
 
-            echo "<div class='card-body' style='width: 400px;'>";
+            echo "<div class='card-body'>";
 
             foreach ($event as $subKey => $subValue) {
                 if ($subKey != 'logo' && $subKey != 'idEvent') {
