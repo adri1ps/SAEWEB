@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css2/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
     <title>Home Page</title>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -120,20 +121,20 @@ if ($module !== null) {
     </footer>
 
     <script>
-    window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function() {
         var bouton = document.getElementById('boutonRetour');
-        // Utilisez une valeur de défilement spécifique ou calculez-la en fonction du contenu de votre page.
-        var seuilDeDefilement = 80; // Par exemple, la hauteur de votre en-tête plus un peu de marge.
+            // Utilisez une valeur de défilement spécifique ou calculez-la en fonction du contenu de votre page.
+            var seuilDeDefilement = 80; // Par exemple, la hauteur de votre en-tête plus un peu de marge.
 
-        if (window.pageYOffset > seuilDeDefilement) {
-            // Si l'utilisateur a défilé au-delà du seuil, masquez le bouton
-            bouton.style.visibility = 'hidden';
-        } else {
-            // Sinon, affichez-le
-            bouton.style.visibility = 'visible';
-        }
-    });
-</script>
+            if (window.pageYOffset > seuilDeDefilement) {
+                // Si l'utilisateur a défilé au-delà du seuil, masquez le bouton
+                bouton.style.visibility = 'hidden';
+            } else {
+                // Sinon, affichez-le
+                bouton.style.visibility = 'visible';
+            }
+        });
+    </script>
 
 
 </body>

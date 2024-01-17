@@ -10,11 +10,11 @@ class VueAccueil extends VueGenerique {
 
     public function menu($nombre, $textes) {
 
-        echo '<div style="background-color: #031633;">';
+        echo '<div class="containerPageAccueil">';
 
             echo '<div class="main-content mt-3 col">';
 
-                echo '<h1 class="d-flex justify-content-center bg-white col-xl-12" style="font-family: Avenir; color: #031633">Bienvenue sur le site de notre jeu vidéo!</h1>';
+                echo '<h1 class="d-flex justify-content-center bg-white col-xl-12 titrePageAccueil">Bienvenue sur le site de notre jeu vidéo!</h1>';
 
                 echo '<div class="d-flex flex-column justify-content-center">';
                     
