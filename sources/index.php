@@ -123,14 +123,13 @@ if ($module !== null) {
     <script>
         window.addEventListener('scroll', function() {
         var bouton = document.getElementById('boutonRetour');
-            // Utilisez une valeur de défilement spécifique ou calculez-la en fonction du contenu de votre page.
-            var seuilDeDefilement = 80; // Par exemple, la hauteur de votre en-tête plus un peu de marge.
 
+            var seuilDeDefilement = 80;
             if (window.pageYOffset > seuilDeDefilement) {
-                // Si l'utilisateur a défilé au-delà du seuil, masquez le bouton
+
                 bouton.style.visibility = 'hidden';
             } else {
-                // Sinon, affichez-le
+
                 bouton.style.visibility = 'visible';
             }
         });
