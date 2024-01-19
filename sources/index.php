@@ -96,12 +96,12 @@ if ($module !== null) {
 ?>
 
     <header>
-        <div class="py-xl-2 py-lg-2 py-md-1 row fixed-top" style="background-color: #031633; z-index: 1030;">
-            <?php $compHeader = New CompHeader(); $compHeader->afficheHeader(); ?>
+
+        <div class="py-xl-2 py-lg-2 py-md-1 row fixed-top header">
+            <?php $compHeader = New CompHeader(); $compHeader -> afficheHeader(); ?>
         </div>
 
-        <!-- Utilisez 'justify-content-center' pour centrer le bouton, et 'mx-auto' pour appliquer une marge automatique sur les côtés -->
-        <div id="boutonRetour" class="fixed-top d-flex" style="top: 150px; left: 0; right: 0; z-index: 1029; width: 100%;">
+        <div id="boutonRetour" class="fixed-top d-flex">
             <div class="row justify-content-center">
                 <div class="col-xl-1">
                     <?php $compBouton = New CompBouton(); $compBouton->afficheBouton(); ?>
@@ -110,13 +110,11 @@ if ($module !== null) {
         </div>
     </header>
 
-
-    <main style="flex: 1 0 auto; margin-top: 300px; margin-bottom: 300px;" class="d-flex flex-column align-items-center">
+    <main class="d-flex flex-column align-items-center">
         <?php echo $tampon;?>
     </main>
 
-
-    <footer class="border-top" style="background-color: #031633; color: white">
+    <footer class="border-top">
         <?php $compFooter = New CompFooter();    $compFooter -> afficheFooter();?>
     </footer>
 

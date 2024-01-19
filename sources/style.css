@@ -2,7 +2,7 @@
 
 .containerEvent {
 
-    margin-top: 300px;
+    margin-top: 150px;
 }
 
 .vignetteEvent {
@@ -74,3 +74,120 @@
     font-family: Avenir;
     color: #031633;
 }
+
+/*--------------------------------------------FOOTER---------------------------------------------*/
+
+footer {
+
+    background: radial-gradient(ellipse at center, #0d1d31 0%, #0c0d13 100%);
+    color: white;
+}
+
+/*--------------------------------------------MAIN---------------------------------------------*/
+
+main {
+
+    flex: 1 0 auto;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+/*--------------------------------------------HEADER---------------------------------------------*/
+
+#boutonRetour {
+
+    top: 120px;
+    left: 0;
+    right: 0;
+    z-index: 1029;
+    width: 100%;
+}
+
+.header {
+
+    background: radial-gradient(ellipse at center, #0d1d31 0%, #0c0d13 100%);
+    z-index: 1030;
+}
+
+/*-----------------------------------FORMULAIRE INSCRIPTION-------------------------------------*/
+
+.form-container {
+
+    background-color: white;
+    opacity: 10;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Avenir;
+    color: black;
+}
+
+.formulaireConnexion {
+
+    background: radial-gradient(ellipse at center, #0d1d31 0%, #0c0d13 100%);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    margin-left: 38%;
+    margin-bottom: 100px;
+    color: white;
+
+}
+
+.fieldsetPageConnexion {
+
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.titreFormulaireConnexion {
+
+    font-weight: bold;
+}
+
+.listePageConnexion {
+
+    list-style: none;
+    padding: 0;
+}
+
+.l1, .l2 {
+
+    margin-bottom: 10px;
+}
+
+.textePageConnexion {
+
+    font-size: 25px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="texteConnexion"], input[type="passwordConnexion"] {
+
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.boutonConnexion {
+
+    background-color: #031633;
+    color: white;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.signup-link {
+
+    font-size: 25px;
+    margin-top: 15px;
+    text-align: center;
+}
+
