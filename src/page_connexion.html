@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form action="index.php?module=mod_connexion&action=loginUser" method="post">
+                <h1 class="text-center">Connexion</h1>
+                <div class="form-container">
+                    <fieldset>
+                        <legend>Identifiants</legend>
+                        <ul>
+                            <li>
+                                <label for="loginConx">Login:</label>
+                                <input type="text" id="loginConx" name="loginConx" class="form-control" required />
+                            </li>
+                            <li>
+                                <label for="mdpConx">Password:</label>
+                                <input type="password" id="mdpConx" name="mdpConx" class="form-control" required />
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button type="submit" class="btn btn-primary btn-block">Connexion</button>
+                    <p class="text-center mt-3">Pas encore inscrit? <a href="index.php?module=mod_connexion&action=addUser">S'inscrire</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="pageConnexionn.css">
