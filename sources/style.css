@@ -11,6 +11,25 @@
     max-height: 500px;
 }
 
+/*--------------------------------------PAGE EVENTS--------------------------------*/
+
+
+. custom-btn-eventPage {
+    background: radial-gradient(ellipse at center, #0d1d31 0%, #0c0d13 100%);
+    color: #ffffff;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    padding: 10px 20px; /* Padding interne */
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.custom-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+}
+
 /*--------------------------------------------AFFICHAGE DES INFOS TOURS-------------------------------------*/
 
 .containerInfosTours {
@@ -75,6 +94,15 @@
     color: #031633;
 }
 
+/*--------------------------------------------BODY---------------------------------------------*/
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 /*--------------------------------------------FOOTER---------------------------------------------*/
 
 footer {
@@ -89,7 +117,7 @@ main {
 
     flex: 1 0 auto;
     margin-top: 200px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 /*--------------------------------------------HEADER---------------------------------------------*/
@@ -111,14 +139,13 @@ main {
 
 /*-----------------------------------FORMULAIRE INSCRIPTION-------------------------------------*/
 
-/*.form-container {
+.form-container {
 
     background-color: white;
     opacity: 10;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: Avenir;
     color: black;
 }
 
@@ -128,11 +155,9 @@ main {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 25%;
-    margin-left: 38%;
+    width: 500px;
     margin-bottom: 100px;
     color: white;
-
 }
 
 .fieldsetPageConnexion {
@@ -140,11 +165,6 @@ main {
     border: 1px solid black;
     padding: 10px;
     margin-bottom: 15px;
-}
-
-.titreFormulaireConnexion {
-
-    font-weight: bold;
 }
 
 .listePageConnexion {
@@ -169,7 +189,7 @@ input[type="texteConnexion"], input[type="passwordConnexion"] {
 
     width: 100%;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #031633;
     border-radius: 4px;
 }
 
@@ -189,5 +209,5 @@ input[type="texteConnexion"], input[type="passwordConnexion"] {
     font-size: 25px;
     margin-top: 15px;
     text-align: center;
-}*/
+}
 
