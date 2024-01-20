@@ -14,6 +14,7 @@ class Connexion {
         try {
             
             self :: $bdd = new PDO($dsn, $user, $mdp);
+
         } catch (PDOException $e) {
             
             die('Erreur de connexion : ' . $e -> getMessage());
