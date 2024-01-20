@@ -29,8 +29,8 @@ include_once 'composants/comp_retour_bouton/comp_bouton.php';
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-session_start();
 
+session_start();
 $actionMenu = (isset($_GET['module'])) ? $_GET['module'] : 'mod_accueil';
 $tampon = '';
 $module = null;
@@ -96,7 +96,6 @@ if ($module !== null) {
 ?>
 
     <header>
-
         <div class="py-xl-2 py-lg-2 py-md-1 row fixed-top header">
             <?php $compHeader = New CompHeader(); $compHeader -> afficheHeader(); ?>
         </div>
@@ -104,13 +103,13 @@ if ($module !== null) {
         <div id="boutonRetour" class="fixed-top d-flex">
             <div class="row justify-content-center">
                 <div class="col-xl-1">
-                    <?php $compBouton = New CompBouton(); $compBouton->afficheBouton(); ?>
+                    <?php $compBouton = New CompBouton(); $compBouton -> afficheBouton(); ?>
                 </div>
             </div>
         </div>
     </header>
 
-    <main class="d-flex flex-column align-items-center">
+    <main class="d-flex flex-column align-items-center justify-content-center">
         <?php echo $tampon;?>
     </main>
 
