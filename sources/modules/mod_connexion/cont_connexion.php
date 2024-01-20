@@ -20,7 +20,7 @@ class ContConnexion {
 
     public function exec() {
         
-        switch($this -> actionConnexion) {
+        /*switch($this -> actionConnexion) {
             case 'deconnexion':
                 
                 $this -> deconnexion();
@@ -33,7 +33,7 @@ class ContConnexion {
 
                 $this -> vueConnexion -> formConnexion();
                 break;
-        }
+        }*/
     }
 
     public function deconnexion() {

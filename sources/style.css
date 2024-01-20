@@ -111,7 +111,7 @@ main {
 
 /*-----------------------------------FORMULAIRE INSCRIPTION-------------------------------------*/
 
-.form-container {
+/*.form-container {
 
     background-color: white;
     opacity: 10;
@@ -189,5 +189,5 @@ input[type="texteConnexion"], input[type="passwordConnexion"] {
     font-size: 25px;
     margin-top: 15px;
     text-align: center;
-}
+}*/
 
