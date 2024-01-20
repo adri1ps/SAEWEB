@@ -47,7 +47,7 @@ class ModeleInscription extends Connexion {
 
     public function nomUtilisateurDejaPris($login) {
 
-        $requete = self :: $bdd -> prepare("SELECT COUNT(*) FROM Joueur WHERE nom = :login");
+        $requete = self :: $bdd -> prepare("SELECT COUNT(*) FROM Joueurs WHERE nom = :login");
         $requete -> bindParam(':login', $login, PDO::PARAM_STR);
         $requete -> execute();
 
@@ -57,7 +57,7 @@ class ModeleInscription extends Connexion {
 
     public function emailDejaPrise($email) {
 
-        $requete = self :: $bdd -> prepare("SELECT COUNT(*) FROM Joueur WHERE email = :courriel");
+        $requete = self :: $bdd -> prepare("SELECT COUNT(*) FROM Joueurs WHERE email = :courriel");
         $requete -> bindParam(':courriel', $email, PDO::PARAM_STR);
         $requete -> execute();
 
