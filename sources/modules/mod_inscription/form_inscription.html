@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <form id="formInscription" action="index.php?module=mod_inscription&&action=inscription" method="POST">
         <h2>INSCRIPTION</h2>
         <div class="form-group">
@@ -27,6 +27,34 @@
         </div>
     </form>
 </div>
+ -->
+
+ <div class="center-container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form action="index.php?module=mod_connexion&action=loginUser" method="post">
+                <h1 class="text-center">Inscription</h1>
+                <div class="form-container">
+                    <fieldset>
+                        <legend>Identifiants</legend>
+                        <ul>
+                            <li>
+                                <label for="loginConx">Login:</label>
+                                <input type="text" id="loginConx" name="loginConx" class="form-control" required />
+                            </li>
+                            <li>
+                                <label for="mdpConx">Password:</label>
+                                <input type="password" id="mdpConx" name="mdpConx" class="form-control" required />
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button type="submit" class="btn btn-primary btn-block">S'inscrire</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <style>
 
     #formInscription {
