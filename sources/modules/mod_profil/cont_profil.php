@@ -20,13 +20,12 @@ class ContProfil {
 
     public function exec() {
 
-        $this -> vueProfil -> menu();
-        switch($this -> actionProfil) {
+        $this -> vueProfil -> page_profil($_SESSION['user']);
+        /*switch($this -> actionProfil) {
             case 'page_profil' :
 
-                $this -> vueProfil -> page_profil();
                 break;
-        }
+        }*/
     }
 
     public function getAffichage() {

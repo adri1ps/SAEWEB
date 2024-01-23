@@ -8,13 +8,18 @@ class VueProfil extends VueGenerique {
 
     }
 
-    public function menu() {
+    public function page_profil($user) {
 
-        include_once 'page_profil_visu.html';
-    }
+        if (!empty($user)) {
 
-    public function page_profil() {
+            foreach ($user as $tab) {
 
-        include_once 'page_profil_visu.html';
+                echo $tab['nom'];
+                echo $tab['mot_de_passe'];
+            }
+        } else {
+            
+            echo "Aucun utilisateur trouvé.";
+        }
     }
 }
