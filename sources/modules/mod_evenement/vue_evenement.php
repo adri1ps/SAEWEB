@@ -4,11 +4,6 @@ include_once 'vue_generique.php';
 
 class VueEvenement extends VueGenerique {
 
-    public function __construct() {
-
-
-    }
-
     public function menu() {
 
         include_once 'page_event.html';

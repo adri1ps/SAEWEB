@@ -9,6 +9,13 @@ class ModeleInfos extends Connexion {
 
     }
 
+    public function retourneLesActeurs() {
+
+        $requete = self :: $bdd -> prepare('SELECT type, sprite FROM ActeursDuJeu');
+        $requete -> execute();
+
+        return $requete -> fetchAll(PDO::FETCH_ASSOC);
+    }
 
     public function retourneInfosDesTours() {
 
