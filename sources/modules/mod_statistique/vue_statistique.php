@@ -8,13 +8,15 @@ class VueStatistique extends VueGenerique {
 
     }
 
-    public function menu() {
-
-    }
 
     public function page_statistique() {
+        $abonnement = $user['abonnement'];
+        $ration = $user['ratio'];
+        $nbKills = $user['nbKills'];
+        $nbMorts = $user['nbMorts'];
+        $nbPartiesJouees = $user['nbPartiesJouees'];
 
-        include_once 'page_statistique_visu.html';
+        include_once 'form_statistique.php';
     }
 }
 ?>
