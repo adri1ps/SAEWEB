@@ -9,17 +9,10 @@ class VueProfil extends VueGenerique {
     }
 
     public function page_profil($user) {
+        $nom = $user['nom'];
+        $email = $user['email'];
+        $biographie = $user['biographie'];
 
-        if (!empty($user)) {
-
-            foreach ($user as $tab) {
-
-                echo $tab['nom'];
-                echo $tab['mot_de_passe'];
-            }
-        } else {
-            
-            echo "Aucun utilisateur trouvé.";
-        }
+        include_once 'form_profil.php';
     }
 }

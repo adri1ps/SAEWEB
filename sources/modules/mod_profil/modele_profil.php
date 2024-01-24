@@ -9,10 +9,9 @@ class ModeleProfil extends Connexion {
 
     }
 
-    public function infosJoueurs($nomJoueur) {
-
-        $query = self :: $bdd -> prepare('SELECT * FROM Joueurs WHERE nom = :user');
-        $requete -> bindParam(':user', $nomJoueur, PDO::PARAM_STR);
+    public function infosJoueurs($user) {
+        $query = self :: $bdd -> prepare('SELECT * FROM Joueurs WHERE nom = :nom');
+        $query -> bindParam(':nom', $user, PDO::PARAM_STR);
         $query -> execute();
 
         return $query -> fetch(PDO::FETCH_ASSOC);

@@ -4,6 +4,7 @@ include_once 'modele_profil.php';
 include_once 'vue_profil.php';
 include_once 'Connexion.php';
 
+
 class ContProfil {
 
     private $modeleProfil;
@@ -19,13 +20,10 @@ class ContProfil {
     }
 
     public function exec() {
+        $user = $_SESSION['user'];
+        $userInfo = $this -> modeleProfil -> infosJoueurs($user);
+        $this -> vueProfil -> page_profil($userInfo);
 
-        $this -> vueProfil -> page_profil($_SESSION['user']);
-        /*switch($this -> actionProfil) {
-            case 'page_profil' :
-
-                break;
-        }*/
     }
 
     public function getAffichage() {

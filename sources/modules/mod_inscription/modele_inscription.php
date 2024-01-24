@@ -63,6 +63,7 @@ class ModeleInscription extends Connexion {
 
         $nombre = $requete -> fetchColumn();
         return $nombre > 0;
+
     }
 
     public function mdpEtMdpConfirmSimilaires($mdp, $mdpConf) {
