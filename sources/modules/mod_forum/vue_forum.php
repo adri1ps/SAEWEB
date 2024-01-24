@@ -14,38 +14,43 @@ class VueForum extends VueGenerique {
     }
 
     public function bienvenue() {
-        
+
         echo 'Bienvenue';
     }
 
     public function affiche_liste_msg($tab) {
-        ?> 
-        <div class="d-flex justify-content-center">
-            <div>
-                <h1>Messages postés:</h1>
-                <?php foreach($tab as $values) { ?>
-                    <ol class="list-group text-center">
-                        <li class="list-group-item">
-                            <?php echo $values['idMsg'] , $values['contenu']  ?>
-                        </li>
-                    </ol>
-                <?php } ?>
-            </div>
-        </div>
-        <?php
-    }       
-
+?>
+        <ol class="list-group text-center">
+<?php
+        foreach ($tab as $values) {
+?>
+            <li class="list-group-item">
+                <h6>Message de l'utilisateur X </h6>
+                <?php echo $values['idMsg'] . " " , "Contenu :" . $values['contenu']  ?>
+            </li>
+<?php
+        }
+?>
+        </ol>
+<?php
+    }
 
     public function form_ajoutMsg(){
-        ?>
-    <h2>Votre Message</h2>
-
+?>
+        
+        <div class="fixed-bottom fixed-right p-3" style="bottom: 400px;">
+        <h2>Votre Message</h2>
         <form action="index.php?module=mod_forum&action=poster" method="post">
-            <label for="texte">Champ Message:</label>
-            <input type="text" id="msg" name="msg" required>
-            <button type="submit"  class="btn btn-primary">Poster</button>
+            <div class="form-group">
+                <label for="msg">Champ Message:</label>
+                <input type="text" id="msg" name="msg" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Poster</button>
         </form>
-
-        <?php
+    </div>
+<?php
     }
 }
+
+?>
+

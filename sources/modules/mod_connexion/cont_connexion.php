@@ -22,15 +22,12 @@ class ContConnexion {
         
         switch($this -> actionConnexion) {
             case 'deconnexion':
-                
                 $this -> deconnexion();
                 break;
             case 'connexion':
-
                 $this -> connexion();
                 break;
             default :
-
                 $this -> vueConnexion -> formConnexion();
                 break;
         }
@@ -38,7 +35,7 @@ class ContConnexion {
 
     public function deconnexion() {
 
-        session_unset();
+       session_unset();
         session_destroy();
     }
 

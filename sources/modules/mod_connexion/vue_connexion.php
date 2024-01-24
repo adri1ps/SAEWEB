@@ -8,4 +8,7 @@ class VueConnexion extends VueGenerique {
 
         include_once 'form_connexion.html';
     }
+
+
+    
 }

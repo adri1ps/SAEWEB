@@ -4,10 +4,7 @@ include_once 'Connexion.php';
 
 class ModeleConnexion extends Connexion {
 
-    public function __construct() {
-
-
-    }
+    public function __construct() {}
 
     public function autorisationConnexion() {
 

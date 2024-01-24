@@ -19,15 +19,16 @@ class ContForum {
     }
 
     public function exec() {
-        
+
         $this->vueForum->menu();
         switch ($this->actionForum) {
             case 'bienvenue' :
-                
                 $this->vueForum->bienvenue();
-                break;
-            default:
-                $this->formMessage();
+            break;
+            case "poster":
+                $this->ajoutMsg();
+            break;
+        
         }
     }
 
@@ -35,18 +36,18 @@ class ContForum {
 
         $tab = $this->modeleForum->getListeMessage();
         $this->vueForum->affiche_liste_msg($tab);
+        $this->formMessage();
     }
 
+    
+
+
     public function formMessage() {
-       
-        echo '<div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">';
         $this->vueForum->form_ajoutMsg();
-        echo '</div>';
     }
 
 
     public function ajoutMsg() {
-    
         $bool = $this->modeleForum->insertMessage();
         if ($bool) {
             echo "Message Posté.";
