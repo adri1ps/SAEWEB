@@ -40,7 +40,7 @@ class ContConnexion {
 
         session_unset();
         session_destroy();
-        header('Location: index.php?module=mod_connexion');
+        header('Location:index.php?module=mod_connexion');
         exit();
     }
 
