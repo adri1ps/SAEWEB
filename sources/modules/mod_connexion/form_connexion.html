@@ -1,3 +1,27 @@
+<div class="col-xl-12 col-lg-10 col-md-8 col-sm-6 col-4 d-flex justify-content-center">
+    <form class="formulaireConnexion" action="index.php?module=mod_connexion&action=connexion" method="POST">
+        <h1 class="text-center">Connexion</h1>
+        <div class="form-container">
+            <fieldset class="fieldsetPageConnexion">
+                <ul class="listePageConnexion">
+                    <li class="l1">
+                        <label class="textePageConnexion" for="loginDeConnexion">Nom d'utilisateur: </label>
+                        <input type="texteConnexion" id="loginDeConnexion" name="login" class="form-control" required placeholder="lewinner44"/>
+                    </li>
+                    <li class="l2">
+                        <label class="textePageConnexion" for="mdpDeConnexion">Mot de passe: </label>
+                        <input type="passwordConnexion" id="mdpDeConnexion" name="mdp" class="form-control" required placeholder="************"/>
+                    </li>
+                </ul>
+            </fieldset>
+            <button type="submitConnexion" class="boutonConnexion">Connexion</button>
+            <p class="text-center mt-3">Pas encore inscrit ? <a href="index.php?module=mod_inscription">S'inscrire</a></p>
+        </div>
+    </form>
+</div>
+
+
+<!--
 <section class="h-100 gradient-form" style="background-color: #eee;">
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -47,4 +71,4 @@
         </div>
     </div>
 </section>
-
+-->
