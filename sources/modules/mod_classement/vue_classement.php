@@ -77,17 +77,18 @@ class VueClassement extends VueGenerique {
         echo "<tbody>";
 
         foreach ($tab as $joueur) {
-            // Commencez une nouvelle ligne pour chaque joueur
+
             echo "<tr>";
             foreach ($champs as $champ) {
                 if ($champ == 'photoProfil') {
+
                     echo "<td><img src='".htmlspecialchars(self::URL.$joueur[$champ])."' alt='Photo de profil' height='50'></td>";
                 } else {
-                    // Assurez-vous d'utiliser htmlspecialchars pour éviter les failles XSS
+
                     echo "<td>".htmlspecialchars($joueur[$champ])."</td>";
                 }
             }
-            // Fin de la ligne pour ce joueur
+
             echo "</tr>";
         }
         echo "</tbody>";
