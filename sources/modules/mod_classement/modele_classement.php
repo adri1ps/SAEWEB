@@ -45,7 +45,7 @@ class ModeleClassement extends Connexion {
         return $query -> fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function affichageClassementDuJoueurConnecte($joueur) {
+    public function retourneClassementDuJoueurConnecte($joueur) {
         if (!empty($joueur)) {
 
             $requete = "SELECT * FROM Joueurs WHERE nom = :nom_user";

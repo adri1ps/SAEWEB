@@ -20,6 +20,10 @@ class ContClassement {
 
     public function exec() {
 
+        if (session_status() == PHP_SESSION_NONE) {
+
+            session_start();
+        }
         switch($this -> actionClassement) {
             case 'eliminations':
 
@@ -43,7 +47,14 @@ class ContClassement {
                 break;
             default:
 
-                $this -> vueClassement -> menu($this -> modeleClassement -> filtres(), $this -> modeleClassement -> affichageClassementDuJoueurConnecte($_SESSION['user']));
+                if (isset($_SESSION['user'])) {
+
+                    $userInfo = $this -> modeleClassement-> retourneClassementDuJoueurConnecte($_SESSION['user']);
+                } else {
+
+                    $userInfo = null;
+                }
+                $this -> vueClassement -> menu($this -> modeleClassement -> filtres(), $userInfo);
                 break;
         }
     }

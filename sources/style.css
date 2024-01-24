@@ -290,7 +290,7 @@ input[type="texteConnexion"], input[type="passwordConnexion"] {
     text-align: center;
 }
 
-/*-----------------------------------FORMULAIRE CONNEXION-------------------------------------*/
+/*-------------------------------FORMULAIRE CONNEXION/INSCRIPTION---------------------------------*/
 
 
 .gradient-custom-2 {
@@ -361,13 +361,12 @@ li {
 }
 
 label {
-    font-size: 18px;
+    font-size: 14px;
     display: block;
     margin-bottom: 5px;
 }
 
-input[type="text"],
-input[type="password"] {
+input[type="text"], input[type="password"], input[type="email"] {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -391,6 +390,9 @@ input[type="submit"] {
     margin-top: 15px;
     text-align: center;
 }
+
+/*-----------------------------------FORMULAIRE INSCRIPTION-------------------------------------*/
+
 
 /*-----------------------------------ACCUEIL DE PAGE CLASSEMENT-------------------------------------*/
 
