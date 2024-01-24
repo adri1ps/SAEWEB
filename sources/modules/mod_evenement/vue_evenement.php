@@ -14,7 +14,7 @@ class VueEvenement extends VueGenerique {
         echo '</div>';
 
         echo '<div class="row mt-xl-2 borderPageEvent">';
-            echo '<div class="col-xl-12 d-flex justify-content-center mt-xl-2">';
+            echo '<div class="col-xl-12 d-flex justify-content-center mt-xl-2 ligneDesTypesDeEvents">';
 
         foreach ($typesEvent as $type) {
 
@@ -24,9 +24,6 @@ class VueEvenement extends VueGenerique {
                     echo '</button>';
                 echo '</a>';
         }
-
-
-
 
             echo '<div>';
         echo '</div>';

@@ -19,7 +19,7 @@ class ModeleInfos extends Connexion {
 
     public function retourneInfosDesTours() {
 
-        $requete = self :: $bdd -> prepare('SELECT type, sprite, cout, pv, portee, cadenceDeTir, projectileTir, texte FROM Tours');
+        $requete = self :: $bdd -> prepare('SELECT type, sprite, cout, pv, portee, cadence, projectile, texte FROM Tours');
         $requete -> execute();
 
         return $requete -> fetchAll(PDO::FETCH_ASSOC);

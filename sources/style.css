@@ -34,6 +34,11 @@
     border-color: #031633;
 }
 
+.ligneDesTypesDeEvents {
+
+    margin-left: 12px;
+}
+
 .custom-btn:hover {
 
     background-color: #0056b3;
@@ -385,5 +390,33 @@ input[type="submit"] {
     font-size: 18px;
     margin-top: 15px;
     text-align: center;
+}
+
+/*-----------------------------------ACCUEIL DE PAGE CLASSEMENT-------------------------------------*/
+
+.boutonAccueilClassement {
+
+    background-color: #031633;
+    color: #ffffff;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    padding: 10px 20px;
+    transition: all 0.3s;
+    width: 150px;
+    font-size: 0.8rem;
+}
+
+.boutonAccueilClassement:hover {
+
+    background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+}
+
+/*-----------------------------------AFFICHAGE DES CLASSEMENTS-------------------------------------*/
+
+.table-classement {
+
+    margin-top: 150px;
 }
 
