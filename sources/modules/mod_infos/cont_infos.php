@@ -25,13 +25,13 @@ class ContInfos {
 
                 $this -> vueInfos -> afficheInfosDesTours($this -> modeleInfos -> retourneInfosDesTours());
                 break;
-
             case 'projectiles':
 
+                $this -> vueInfos -> afficheInfosDesProjectiles($this -> modeleInfos -> retourneInfosDesProjectiles());
                 break;
-
             case 'soldats':
 
+                $this -> vueInfos -> afficheInfosDesSoldats($this -> modeleInfos -> retourneInfosDesSoldats());
                 break;
             default:
 

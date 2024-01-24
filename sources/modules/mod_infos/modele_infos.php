@@ -24,4 +24,20 @@ class ModeleInfos extends Connexion {
 
         return $requete -> fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function retourneInfosDesSoldats() {
+
+        $requete = self :: $bdd -> prepare('SELECT type, sprite, pv, vitesse, dégâts, portée, texte FROM Soldats');
+        $requete -> execute();
+
+        return $requete -> fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function retourneInfosDesProjectiles() {
+
+        $requete = self :: $bdd -> prepare('SELECT type, sprite, précision, vitesse, dégâts, texte FROM Projectiles');
+        $requete -> execute();
+
+        return $requete -> fetchAll(PDO::FETCH_ASSOC);
+    }
 }

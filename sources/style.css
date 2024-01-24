@@ -13,10 +13,9 @@
     max-height: 500px;
 }
 
-/*--------------------------------------PAGE EVENTS--------------------------------*/
+/*------------------------------------------------PAGE EVENTS------------------------------------------*/
 
-
-. custom-btn-eventPage {
+.custom-btn-eventPage {
 
     background: radial-gradient(ellipse at center, #0d1d31 0%, #0c0d13 100%);
     color: #ffffff;
@@ -26,6 +25,13 @@
     padding: 10px 20px; /* Padding interne */
     font-size: 1rem;
     transition: all 0.3s;
+    width: 150px;
+    font-size: 0.8rem;
+}
+
+.borderPageEvent {
+
+    border-color: #031633;
 }
 
 .custom-btn:hover {
@@ -38,16 +44,17 @@
 
 .containerDesActeurs {
 
-    margin-top: 100px;
+
 }
 
 .vignetteDesActeurs {
-
     min-height: 300px;
     max-height: 300px;
-    max-width: 400px;
+    min-width: 300px;
+    max-width: 500px;
     border-color: #0c0d13;
 }
+
 
 .imageDesActeurs {
 
@@ -55,11 +62,29 @@
     max-width: 130px;
 }
 
+/*--------------------------------------------AFFICHAGE DES INFOS SOLDATS-------------------------------------*/
+
+.containerInfosSoldats {
+
+}
+
+.vignetteInfosSoldats {
+
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.imagesInfosSoldats {
+
+    max-height: 100px;
+    max-width: 100px;
+}
+
 /*--------------------------------------------AFFICHAGE DES INFOS TOURS-------------------------------------*/
 
 .containerInfosTours {
 
-    margin-top: 150px;
+
 }
 
 .vignetteInfosTours {
@@ -69,6 +94,30 @@
 }
 
 .imagesInfosTours {
+
+    max-height: 100px;
+    max-width: 100px;
+}
+
+/*--------------------------------------------AFFICHAGE DES INFOS PROJECTILES-------------------------------------*/
+
+.containerInfosProjectiles {
+
+
+}
+
+.card-img-top {
+
+    min-height: 100px;
+}
+
+.vignetteInfosProjectiles {
+
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.imagesInfosProjectiles {
 
     max-height: 100px;
     max-width: 100px;
@@ -110,6 +159,7 @@
 .containerPageAccueil {
 
     background-color: #031633;
+    margin-top: 150px;
 }
 
 .titrePageAccueil {
@@ -140,7 +190,7 @@ footer {
 main {
 
     flex: 1 0 auto;
-    margin-top: 200px;
+    margin-top: 150px;
     margin-bottom: 50px;
 }
 
