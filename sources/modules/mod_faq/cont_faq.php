@@ -21,10 +21,17 @@ class ContFAQ {
     public function exec() {
 
         switch($this -> actionFAQ) {
+            case 'poser_question': 
+
+                $this -> modeleFAQ -> insertQuestion();
+                header('Location:index.php?module=mod_faq');
+                exit();
+                break;
             default:
 
+                $this -> vueFAQ -> affiche_faq($this -> modeleFAQ -> retourneLesDonneesDeLaFAQ());
+                $this -> vueFAQ -> affichageFormPoserQuestion();
                 break;
-
         }
     }
 

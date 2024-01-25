@@ -216,6 +216,13 @@ main {
     z-index: 1030;
 }
 
+.custom-search-bar {
+    
+    height: 40px; /* Ajustez la hauteur souhaitée ici */
+    
+}
+  
+
 /*-----------------------------------FORMULAIRE INSCRIPTION-------------------------------------*/
 
 .form-container {
@@ -459,5 +466,25 @@ input[type="submit"] {
 
     margin-bottom: 30px;
 }
+
+/*-------------------------------------------PAGE FAQ--------------------------------------------*/
+
+
+.containerPageFAQ {
+
+    margin-top: 130px !important;
+}
+
+.boutonFAQ {
+
+    background-color: #031633 !important;
+    color: white !important;
+    border-radius: 20px !important;
+    font-size: 20px !important;
+    padding: 10px 15px !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+
 
 
