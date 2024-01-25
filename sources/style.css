@@ -261,7 +261,29 @@ input[type="texteConnexion"], input[type="passwordConnexion"] {
     margin-top: 150px;
 }
 
-.nomJoueur{
-    color: rgb(122, 43, 43);
+#nomJoueur{
+    color: red; 
+    font-weight: bold;
 }
 
+#topic{
+    font-weight: bold;
+    
+}
+
+.btn-primary{
+    margin: 0.2pc;
+}
+
+#contenu{
+    color: #0c0d13;
+    font-weight: bold;
+}
+
+.pForum{
+    color: gray; 
+}
+
+.h1Forum{
+    font-weight: 800;
+}

@@ -30,7 +30,6 @@ class ModeleForum extends Connexion {
                 return true;
             }
         }
-        
         return false;
     }
 

@@ -37,9 +37,9 @@ class ContForum {
     public function ajoutMsg() {
         $bool = $this->modeleForum->insertMessage();
         if ($bool) {
-            echo "Message Posté.";
+            echo $this->vueForum->messageInsertionReussit();
         } else {
-            echo "Insertion invalide.";
+            $this->vueForum->messageInsertionInvalide();
         }
     }
 

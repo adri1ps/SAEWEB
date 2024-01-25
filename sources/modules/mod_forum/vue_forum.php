@@ -12,20 +12,25 @@ class VueForum extends VueGenerique {
     {
         ?>
         <div class="container containerPageForum">
+            <h1 class="h1Forum text-center mb-4">Forum</h1>
             <div class="row">
                 <div class="col-md-8">
                     <ol class="list-group">
                         <?php foreach ($tab as $values): ?>
-
                             <li class="list-group-item mb-4 shadow-lg p-3 mb-5 bg-white rounded">
-                                <h3><?php echo $values['topic'] ?></h3>
-                                <p>Publié le <?php echo $values['date']." par ".$values['nom']?></p>
-                                <?php echo "Contenu : " . $values['contenu'] ?>
+                                <h3 id="topic"><?php echo $values['topic'] ?></h3>
+                                <p class="pForum">
+                                    Publié le <?php echo $values['date']." par "; ?>
+                                    <span id="nomJoueur"><?php echo $values['nom'] ?></span>
+                                </p>
+                                <p class="pForum">
+                                    Contenu :<span id="contenu"> <?php echo  $values['contenu'] ?></span>
+                                </p>
                             </li>
                         <?php endforeach; ?>
                     </ol>
                 </div>
-
+    
                 <div class="col-md-4">
                     <?php $this->form_ajoutMsg();?>
                 </div>
@@ -33,6 +38,7 @@ class VueForum extends VueGenerique {
         </div>
         <?php
     }
+    
 
     public function form_ajoutMsg(){
         ?>
@@ -52,4 +58,16 @@ class VueForum extends VueGenerique {
         </div>
         <?php
     }
+
+
+    public function messageInsertionReussit(){
+
+        echo"Message Posté";
+    }
+
+    public function messageInsertionInvalide(){
+
+        echo"Insertion Invalide";
+    }
 }
+?>
