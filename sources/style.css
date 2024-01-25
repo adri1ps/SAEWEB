@@ -1,0 +1,588 @@
+/*--------------------------------------PAGE PROFILE--------------------------------*/
+.profil {
+    width: 95%;
+    height: 95%;
+    font-family: Avenir;
+    border-radius: 25px 25px 25px 25px;
+    background-color: #031633;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 120px;
+}
+.profil-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: white;
+}
+@media screen and (max-width: 1200px) {
+    .profil-container {
+        width: 100%;
+        height: 100%;
+        color: white;
+    }
+}
+.titrePageProfil {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    margin-top: 1%;
+}
+.navPageProfil {
+    margin-right: 3%;
+    margin-bottom: 2%;
+    text-align: center;
+    width: auto;
+
+}
+
+.image-container {
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.photo-profil {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    display: block;
+}
+.sectionPageProfil {
+    flex: 1;
+    margin-left: 1%;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.valeurs-recuperees {
+    display: flex;
+}
+.textePageProfil {
+    color: white;
+}
+
+.statistique {
+    margin-left: 10%;
+    color: white;
+}
+
+/*--------------------------------------------AFFICHAGE DES EVENTS-------------------------------------*/
+
+.containerEvent {
+
+    margin-top: 150px;
+}
+
+.vignetteEvent {
+
+    min-height: 500px;
+    max-height: 500px;
+}
+
+/*------------------------------------------------PAGE EVENTS------------------------------------------*/
+
+.custom-btn-eventPage {
+
+    background: radial-gradient(ellipse at center, #0d1d31 0%, #0c0d13 100%);
+    color: #ffffff;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    padding: 10px 20px; /* Padding interne */
+    font-size: 1rem;
+    transition: all 0.3s;
+    width: 150px;
+    font-size: 0.8rem;
+}
+
+.borderPageEvent {
+
+    border-color: #031633;
+}
+
+.ligneDesTypesDeEvents {
+
+    margin-left: 12px;
+}
+
+.custom-btn:hover {
+
+    background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+}
+
+/*-----------------------------------------------PAGE INFOS------------------------------------------------*/
+
+.containerDesActeurs {
+
+
+}
+
+.vignetteDesActeurs {
+    min-height: 300px;
+    max-height: 300px;
+    min-width: 300px;
+    max-width: 500px;
+    border-color: #0c0d13;
+}
+
+
+.imageDesActeurs {
+
+    max-height: 130px;
+    max-width: 130px;
+}
+
+/*--------------------------------------------AFFICHAGE DES INFOS SOLDATS-------------------------------------*/
+
+.containerInfosSoldats {
+
+}
+
+.vignetteInfosSoldats {
+
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.imagesInfosSoldats {
+
+    max-height: 100px;
+    max-width: 100px;
+}
+
+/*--------------------------------------------AFFICHAGE DES INFOS TOURS-------------------------------------*/
+
+.containerInfosTours {
+
+
+}
+
+.vignetteInfosTours {
+
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.imagesInfosTours {
+
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.imageProjectile {
+
+    max-width: 50px;
+    max-height: 20px;
+}
+
+/*--------------------------------------------AFFICHAGE DES INFOS PROJECTILES-------------------------------------*/
+
+.containerInfosProjectiles {
+
+
+}
+
+.card-img-top {
+
+    min-height: 100px;
+}
+
+.vignetteInfosProjectiles {
+
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.imagesInfosProjectiles {
+
+    max-height: 100px;
+    max-width: 100px;
+}
+
+/*--------------------------------------------BOUTON TELECHARGEMENT ACCUEIL PAGE-------------------------------------*/
+
+.btn-custom {
+    background-color: #031633;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 9px #999;
+    font-family: Avenir;
+  }
+
+.btn-custom:hover {
+    background-color: #0056b3;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.btn-custom:active {
+    background-color: #3e8e41;
+    box-shadow: 0 3px #666;
+    transform: translateY(4px);
+}
+
+/*--------------------------------------------PAGE ACCUEIL-------------------------------------*/
+
+.containerPageAccueil {
+
+    background-color: #031633;
+    margin-top: 150px;
+}
+
+.titrePageAccueil {
+
+    font-family: Avenir;
+    color: #031633;
+}
+
+/*--------------------------------------------BODY---------------------------------------------*/
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*--------------------------------------------FOOTER---------------------------------------------*/
+
+footer {
+
+    background: radial-gradient(ellipse at center, #0d1d31 0%, #0c0d13 100%);
+    color: white;
+}
+
+/*--------------------------------------------MAIN---------------------------------------------*/
+
+main {
+
+    flex: 1 0 auto;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+/*--------------------------------------------HEADER---------------------------------------------*/
+
+#boutonRetour {
+
+    top: 150px;
+    left: 0;
+    right: 0;
+    z-index: 1029;
+    width: 100%;
+}
+
+.header {
+
+    background: radial-gradient(ellipse at center, #0d1d31 0%, #0c0d13 100%);
+    z-index: 1030;
+}
+
+.offcanvas-body .list-unstyled .nav-item a:hover {
+    color: #007bff; 
+    text-decoration: underline; 
+    
+}
+  
+
+/*-----------------------------------FORMULAIRE INSCRIPTION-------------------------------------*/
+
+.form-container {
+
+    background-color: white;
+    opacity: 10;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.formulaireConnexion {
+
+    background: radial-gradient(ellipse at center, #0d1d31 0%, #0c0d13 100%);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    margin-bottom: 100px;
+    color: white;
+}
+
+.fieldsetPageConnexion {
+
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.listePageConnexion {
+
+    list-style: none;
+    padding: 0;
+}
+
+.l1, .l2 {
+
+    margin-bottom: 10px;
+}
+
+.textePageConnexion {
+
+    font-size: 25px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="texteConnexion"], input[type="passwordConnexion"] {
+
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #031633;
+    border-radius: 4px;
+}
+
+.boutonConnexion {
+
+    background-color: #031633;
+    color: white;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.signup-link {
+
+    font-size: 25px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/*-------------------------------FORMULAIRE CONNEXION/INSCRIPTION---------------------------------*/
+
+
+.gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #fccb90;
+
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #000000, #1e272e , #2c3e50 , #34495e );
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #000000, #1e272e , #2c3e50 , #34495e );
+}
+
+@media (min-width: 768px) {
+    .gradient-form {
+        height: 100vh !important;
+    }
+}
+@media (min-width: 769px) {
+    .gradient-custom-2 {
+        border-top-right-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+    }
+}
+
+.center-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: rgba(96, 45, 109, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 100%;
+}
+
+form {
+    background-color: #f8f8f8;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+fieldset {
+    border: 1px solid #83769b;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.signup-link {
+    font-size: 18px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/*-----------------------------------FORMULAIRE INSCRIPTION-------------------------------------*/
+
+
+/*-----------------------------------ACCUEIL DE PAGE CLASSEMENT-------------------------------------*/
+
+.boutonAccueilClassement {
+
+    background-color: #031633;
+    color: #ffffff;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    padding: 10px 20px;
+    transition: all 0.3s;
+    width: 150px;
+    font-size: 0.8rem;
+}
+
+.boutonAccueilClassement:hover {
+
+    background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+}
+
+/*-----------------------------------AFFICHAGE DES CLASSEMENTS-------------------------------------*/
+
+.table-classement {
+
+    margin-top: 150px;
+}
+
+
+/*-------------------------------------------PAGE CONTACT--------------------------------------------*/
+
+.containerAccueilPageContact {
+
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+}
+.headerPageContact {
+
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+.titreContact {
+
+    font-size: 24px;
+    color: #333;
+}
+.sousTitreContact {
+
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+.texteContact {
+
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 10px 0 20px;
+}
+.sectionPageContact {
+
+    margin-bottom: 30px;
+}
+
+/*-------------------------------------------PAGE FAQ--------------------------------------------*/
+
+
+.containerPageFAQ {
+
+    margin-top: 130px !important;
+}
+
+.boutonFAQ {
+
+    background-color: #031633 !important;
+    color: white !important;
+    border-radius: 20px !important;
+    font-size: 20px !important;
+    padding: 10px 15px !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+
+/*-----------------------------------PAGE FORUM-------------------------------------*/
+.containerPageForum {
+    margin-top: 150px;
+}
+#nomJoueur{
+    color: red;
+    font-weight: bold;
+}
+#topic{
+    font-weight: bold;
+
+}
+.btn-primary{
+    margin: 0.2pc;
+}
+#contenu{
+    color: #0c0d13;
+    font-weight: bold;
+}
+.pForum{
+    color: gray;
+}
+.h1Forum{
+    font-weight: 800;
+}

@@ -1,0 +1,45 @@
+<head>
+    <link rel="stylesheet" href="../../css2/bootstrap.css">
+</head>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-2 col-2 d-flex justify-content-center align-content-center">
+            <button class="navbar-toggler justify-content-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuDeroulant" aria-controls="menuDeroulant" aria-expanded="false" aria-label="Toggle navigation">
+                <img width="65" src="ressources/menu2.png" alt="Logo deroulant">
+            </button>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-3 col-sm-6 my-lg-1 col-6 my-md-3 my-sm-2 my-4 d-flex">
+            <a class="navbar-brand" href="index.php?">
+                <img class="w-100" src="ressources/titreRedLineLogo.png" alt="Logo du Titre">
+            </a>
+        </div>
+
+        <div class="offcanvas offcanvas-start collapse navbar-collapse position-absolute" id="menuDeroulant" style="height: 1500px; z-index: 10000;">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu de navigation</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="list-unstyled">
+                    <li class="nav-item"><a class="nav-link" href="index.php?module=mod_connexion">Se Connecter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php?module=mod_inscription">S'inscrire gratuitement</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php?module=mod_infos">Infos sur le jeu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php?module=mod_forum">Forum</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php?module=mod_evenement">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php?module=mod_classement">Classement</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <form class="col-xl-5 col-lg-3 col-md-4 d-none d-md-block my-md-1 my-lg-1 my-xl-2 d-flex d-md-flex" action="#">
+            <input class="form-control me-xl-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+
+        <ul class="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-4 d-flex nav justify-content-center align-items-center">
+            <li class="nav-item me-xl-3">
+                <a class="nav-link" href="index.php?module=mod_connexion" style="color: white;">Se Connecter</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.php?module=mod_inscription" style="color: white;">S'inscrire</a>
+            </li>
+        </ul>
