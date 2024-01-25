@@ -19,7 +19,6 @@
                                     }
                                 echo '</div>';
                                 ?>
-
                                 <form action="index.php?module=mod_connexion&action=connexion" method="post">
                                     <p>Connecter vous à votre compte </p>
 

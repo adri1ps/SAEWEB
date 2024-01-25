@@ -494,9 +494,26 @@ input[type="submit"] {
 
 /*-----------------------------------PAGE FORUM-------------------------------------*/
 .containerPageForum {
-    margin-top: 150px !important;
+    margin-top: 150px;
 }
+#nomJoueur{
+    color: red;
+    font-weight: bold;
+}
+#topic{
+    font-weight: bold;
 
-.nomJoueur{
-    color: rgb(122, 43, 43);
+}
+.btn-primary{
+    margin: 0.2pc;
+}
+#contenu{
+    color: #0c0d13;
+    font-weight: bold;
+}
+.pForum{
+    color: gray;
+}
+.h1Forum{
+    font-weight: 800;
 }

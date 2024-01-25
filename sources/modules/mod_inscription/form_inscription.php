@@ -10,7 +10,6 @@
                                     <img class="w-100" src="ressources/titreRedLineLogo.png" alt="Logo du Titre">
                                     <h4 class="mt-1 mb-5 pb-1">Bienvenue sur RedLineDefense</h4>
                                 </div>
-
                                 <form action="index.php?module=mod_inscription&action=inscription" method="post">
                                     <p>Creer votre compte</p>
 
@@ -26,7 +25,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="mdpDeInscription" id="mdp" name="mdp" class="form-control" required placeholder="************"/>
+                                        <input type="password" id="mdp" name="mdpInsc" class="form-control" required placeholder="************"/>
                                         <label class="form-label" for="mdpDeConnexion">Mot de passe</label>
                                     </div>
 

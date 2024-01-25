@@ -14,8 +14,7 @@ class ContInscription {
         
         $this -> modeleInscription = new ModeleInscription();
         $this -> vueInscription = new VueInscription();
-        $this -> actionInscription = isset($_GET['action']) ? $_GET['action'] : 'Bienvenue sur la page Joueur';
-
+        $this -> actionInscription = isset($_GET['action']) ? $_GET['action'] : 'Bienvenue sur la page';
     }
 
     public function exec() {
@@ -24,8 +23,14 @@ class ContInscription {
         switch($this -> actionInscription) {
             case 'inscription' :
 
-                $this -> modeleInscription -> creationUtilisateur();
-                $this -> connexion();
+                if ($this -> modeleInscription -> creationUtilisateur()) {
+
+                    $this -> connexion();
+                }
+                else {
+
+                    $this -> vueInscription -> menu();
+                }
                 break;
         }
     }
@@ -40,19 +45,10 @@ class ContInscription {
         unset($_SESSION['utilisateur']);
     }
 
-    public function addUser() {
-
-        $bool = $this -> modeleConnexion -> createUser();
-        if($bool) {
-            echo "Insertion valide.";
-        }else {
-            echo "Insertion invalide.";
-        }
-    }
-
     public function connexion() {
 
-
         $_SESSION['user'] = $_POST['nomInsc'];
+        header('Location: index.php?module=mod_profil');
+        exit();
     }
 }

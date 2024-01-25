@@ -10,35 +10,56 @@ class ModeleInscription extends Connexion {
     }
 
     public function creationUtilisateur() {
-
-        if ($this -> toutesLesInfosNonVides()) {
-
+        if ($this->toutesLesInfosNonVides()) {
             $user_name = htmlspecialchars($_POST['nomInsc']);
             $user_email = htmlspecialchars($_POST['emailInsc']);
             $user_password = htmlspecialchars($_POST['mdpInsc']);
             $user_password_confirm = htmlspecialchars($_POST['mdpConfirmInsc']);
-            $user_conditions = htmlspecialchars($_POST['conditionsInsc']);
 
-            if ($this -> emailDejaPrise($user_email) || $this -> nomUtilisateurDejaPris($user_name) || !$this -> mdpEtMdpConfirmSimilaires($user_password, $user_password_confirm)) {
-
+            if ($this->nomUtilisateurDejaPris($user_name)) {
+                $_SESSION['error'] = "Le nom d'utilisateur est déjà pris.";
                 return false;
             }
-            else {
 
-                $hashed_password = password_hash($user_password, PASSWORD_DEFAULT);
-                $query = self :: $bdd -> prepare("INSERT INTO Joueurs (nom, mot_de_passe, tempsDeJeu, email, abonnement, ratio, nbKills, nbMorts, nbPartiesJouees, biographie) 
-                VALUES (:user, :mdp, 12, :courriel, 12, 2.5, 12, 21, 2, 'je suis un nouvel utilisateur...')");
-                $query -> bindValue(':user', $user_name);
-                $query -> bindValue(':mdp', $hashed_password);
-                $query -> bindValue(':courriel', $user_email);
-                return $query -> execute();
+            if ($this->emailDejaPrise($user_email)) {
+                $_SESSION['error'] = "L'adresse e-mail est déjà utilisée.";
+                return false;
             }
-        }
-        else {
 
+            if (!$this->mdpEtMdpConfirmSimilaires($user_password, $user_password_confirm)) {
+                $_SESSION['error'] = "Les mots de passe ne correspondent pas.";
+                return false;
+            }
+
+            $hashed_password = password_hash($user_password, PASSWORD_DEFAULT);
+
+            $temps = rand(0, 100);
+            $abonnement = rand(0, 1);
+            $ratio = rand(1, 5) + rand(0, 99) / 100;
+            $eliminations = rand(0, 500);
+            $morts = rand(0, 500);
+            $parties = rand(0, 100);
+
+            $query = self::$bdd->prepare("INSERT INTO Joueurs (nom, mot_de_passe, temps, email, abonnement, ratio, eliminations, morts, parties, biographie) 
+            VALUES (:user, :mdp, :temps, :courriel, :abonnement, :ratio, :eliminations, :morts, :parties, 'je suis un nouvel utilisateur...')");
+            $query->bindValue(':user', $user_name);
+            $query->bindValue(':mdp', $hashed_password);
+            $query->bindValue(':temps', $temps);
+            $query->bindValue(':courriel', $user_email);
+            $query->bindValue(':abonnement', $abonnement);
+            $query->bindValue(':ratio', $ratio);
+            $query->bindValue(':eliminations', $eliminations);
+            $query->bindValue(':morts', $morts);
+            $query->bindValue(':parties', $parties);
+
+            return $query->execute();
+        } else {
+            $_SESSION['error'] = "Toutes les informations sont requises.";
             return false;
         }
     }
+
+
 
     public function toutesLesInfosNonVides() {
 

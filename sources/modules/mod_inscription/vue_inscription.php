@@ -6,12 +6,7 @@ class VueInscription extends VueGenerique {
 
     public function menu() {
 
-        include_once 'form_inscription.html';
-    }
-
-    public function formInscription() {
-        
-        include_once 'form_inscription.html';
+        include_once 'form_inscription.php';
     }
 }
 ?>
