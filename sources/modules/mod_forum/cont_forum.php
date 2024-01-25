@@ -12,26 +12,45 @@ class ContForum {
 
     public function __construct() {
         
-        $this -> modeleForum = new ModeleForum();
-        $this -> vueForum = new VueForum();
-        $this -> actionForum = isset($_GET['action']) ? $_GET['action'] : 'Bienvenue sur la page Joueur';
+        $this->modeleForum = new ModeleForum();
+        $this->vueForum = new VueForum();
+        $this->actionForum = isset($_GET['action']) ? $_GET['action'] : 'Bienvenue sur la page Joueur';
 
     }
 
     public function exec() {
+        switch ($this->actionForum) {
+            case "poster":
+                $this->ajoutMsg();
+            break;
         
-        $this -> vueForum -> menu();
-        switch($this -> actionForum) {
-            case 'bienvenue' :
-                
-                $this -> vueForum -> bienvenue();
-                break;
         }
     }
 
     public function getAffichage() {
+       
+        $tab = $this->modeleForum->getListeMessageAvecInfoJoueur();
 
-        return $this -> vueForum -> getAffichage();
+        $this->vueForum->affiche_liste_msg($tab);
+       
     }
+
+    
+
+
+    public function formMessage() {
+        $this->vueForum->form_ajoutMsg();
+    }
+
+
+    public function ajoutMsg() {
+        $bool = $this->modeleForum->insertMessage();
+        if ($bool) {
+            echo "Message Posté.";
+        } else {
+            echo "Insertion invalide.";
+        }
+    }
+
 }
 ?>

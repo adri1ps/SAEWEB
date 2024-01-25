@@ -216,9 +216,9 @@ main {
     z-index: 1030;
 }
 
-.custom-search-bar {
-    
-    height: 40px; /* Ajustez la hauteur souhaitée ici */
+.offcanvas-body .list-unstyled .nav-item a:hover {
+    color: #007bff; 
+    text-decoration: underline; 
     
 }
   
@@ -486,5 +486,11 @@ input[type="submit"] {
     cursor: pointer !important;
 }
 
+/*-----------------------------------PAGE FORUM-------------------------------------*/
+.containerPageForum {
+    margin-top: 150px !important;
+}
 
-
+.nomJoueur{
+    color: rgb(122, 43, 43);
+}
