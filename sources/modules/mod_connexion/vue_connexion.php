@@ -6,6 +6,6 @@ class VueConnexion extends VueGenerique {
 
     public function formConnexion() {
 
-        include_once 'form_connexion.html';
+        include_once 'form_connexion.php';
     }
 }

@@ -10,6 +10,15 @@
                                     <img class="w-100" src="ressources/titreRedLineLogo.png" alt="Logo du Titre">
                                     <h4 class="mt-1 mb-5 pb-1">Bienvenue sur RedLineDefense</h4>
                                 </div>
+                                <?php
+                                echo '<div class="d-inline-block">';
+                                    $errorMessage = $_SESSION['error'] ?? '';
+                                    if (!empty($errorMessage)) {
+                                        echo '<div class="alert alert-danger d-flex justify-content-center mx-auto">' . $errorMessage . '</div>';
+                                        unset($_SESSION['error']);
+                                    }
+                                echo '</div>';
+                                ?>
 
                                 <form action="index.php?module=mod_connexion&action=connexion" method="post">
                                     <p>Connecter vous à votre compte </p>

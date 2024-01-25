@@ -58,8 +58,8 @@ class ContConnexion {
         }
         else {
 
-            New ModConnexion();
+            header('Location: index.php?module=mod_connexion');
+            exit();
         }
-
     }
 }

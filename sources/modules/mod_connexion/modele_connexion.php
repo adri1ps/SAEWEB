@@ -22,13 +22,17 @@ class ModeleConnexion extends Connexion {
             $query -> execute();
 
             $row = $query -> fetch(PDO::FETCH_ASSOC);
-            $mdpHashed = $row['mot_de_passe'];
-    
-            if ($row && password_verify($user_password, $mdpHashed)) {
-    
-                $_SESSION['user'] = $user_name;
-                return true; 
+            if ($row) {
+
+                $mdpHashed = $row['mot_de_passe'];
+                if (password_verify($user_password, $mdpHashed)) {
+
+                    $_SESSION['user'] = $user_name;
+                    return true;
+                }
             }
+
+            $_SESSION['error'] = "Nom d'utilisateur ou mot de passe incorrect.";
         }
     
         return false;
