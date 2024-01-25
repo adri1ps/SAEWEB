@@ -19,12 +19,42 @@ class ContClassement {
     }
 
     public function exec() {
-        
-        $this -> vueClassement -> menu();
+
+        if (session_status() == PHP_SESSION_NONE) {
+
+            session_start();
+        }
         switch($this -> actionClassement) {
-            case 'bienvenue' :
-                
-                $this -> vueClassement -> bienvenue();
+            case 'eliminations':
+
+                $this -> vueClassement -> affiche_liste($this -> modeleClassement -> classementJoueursParNbKills());
+                break;
+            case 'temps':
+
+                $this -> vueClassement -> affiche_liste($this -> modeleClassement -> classementJoueursParTempsJeu());
+                break;
+            case 'ratio':
+
+                $this -> vueClassement -> affiche_liste($this -> modeleClassement -> classementJoueursParRatio());
+                break;
+            case 'morts':
+
+                $this -> vueClassement -> affiche_liste($this -> modeleClassement -> classementJoueursParNbMorts());
+                break;
+            case 'parties':
+
+                $this -> vueClassement -> affiche_liste($this -> modeleClassement -> classementJoueursParNbPartiesJouees());
+                break;
+            default:
+
+                if (isset($_SESSION['user'])) {
+
+                    $userInfo = $this -> modeleClassement-> retourneClassementDuJoueurConnecte($_SESSION['user']);
+                } else {
+
+                    $userInfo = null;
+                }
+                $this -> vueClassement -> menu($this -> modeleClassement -> filtres(), $userInfo);
                 break;
             case 'nbKills':
 
