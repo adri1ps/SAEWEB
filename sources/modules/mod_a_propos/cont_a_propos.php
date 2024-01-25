@@ -22,8 +22,9 @@ class ContAPropos {
         switch($this -> actionAPropos) {
             default:
 
-                $this -> vueAPropos -> menu();
+                $this -> vueAPropos -> menu($this -> modeleAPropos -> retourneLesTextesEnFonctionDuTypeChoisi('aproposTitre'), $this -> modeleAPropos -> retourneLesTextesEnFonctionDuTypeChoisi('aproposTexte'));
                 break;
+
         }
     }
 
