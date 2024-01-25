@@ -104,6 +104,12 @@
     max-width: 100px;
 }
 
+.imageProjectile {
+
+    max-width: 50px;
+    max-height: 20px;
+}
+
 /*--------------------------------------------AFFICHAGE DES INFOS PROJECTILES-------------------------------------*/
 
 .containerInfosProjectiles {

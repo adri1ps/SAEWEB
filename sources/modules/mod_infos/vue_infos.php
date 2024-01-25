@@ -53,8 +53,8 @@ class VueInfos extends VueGenerique {
                         echo '<p class="card-text col-xl-2 d-flex justify-content-center">Coût '.htmlspecialchars($tour['cout']).'</p>';
                         echo '<p class="card-text col-xl-2 d-flex justify-content-center">PV '.htmlspecialchars($tour['pv']).'</p>';
                         echo '<p class="card-text col-xl-2 d-flex justify-content-center">Portée '.htmlspecialchars($tour['portee']).'</p>';
-                        echo '<p class="card-text col-xl-2 d-flex justify-content-center">Cadence '.htmlspecialchars($tour['cadenceDeTir']).'</p>';
-                        echo '<p class="card-text col-xl-4 d-flex justify-content-center">Projectile <img class="card-img-top" style="width: 50px;" src="'.htmlspecialchars(self::URL . $tour['projectileTir']).'" alt="logo du projectile"></p>';
+                        echo '<p class="card-text col-xl-2 d-flex justify-content-center">Cadence '.htmlspecialchars($tour['cadence']).'</p>';
+                        echo '<p class="card-text col-xl-4 d-flex justify-content-center">Projectile <img class="card-img-top imageProjectile" src="'.htmlspecialchars(self::URL . $tour['projectile']).'" alt="logo du projectile"></p>';
 
 
                         echo '</div>';
