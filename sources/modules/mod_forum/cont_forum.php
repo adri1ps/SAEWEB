@@ -19,12 +19,7 @@ class ContForum {
     }
 
     public function exec() {
-
-        $this->vueForum->menu();
         switch ($this->actionForum) {
-            case 'bienvenue' :
-                $this->vueForum->bienvenue();
-            break;
             case "poster":
                 $this->ajoutMsg();
             break;
@@ -33,10 +28,11 @@ class ContForum {
     }
 
     public function getAffichage() {
+       
+        $tab = $this->modeleForum->getListeMessageAvecInfoJoueur();
 
-        $tab = $this->modeleForum->getListeMessage();
         $this->vueForum->affiche_liste_msg($tab);
-        $this->formMessage();
+       
     }
 
     
