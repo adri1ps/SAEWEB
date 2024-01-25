@@ -19,14 +19,9 @@ class ContProfil {
     }
 
     public function exec() {
-
-        $this -> vueProfil -> menu();
-        switch($this -> actionProfil) {
-            case 'page_profil' :
-
-                $this -> vueProfil -> page_profil();
-                break;
-        }
+        $user = $_SESSION['user'];
+        $userInfo = $this -> modeleProfil -> infosJoueurs($user);
+        $this -> vueProfil -> page_profil($userInfo);
     }
 
     public function getAffichage() {

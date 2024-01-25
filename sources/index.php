@@ -22,6 +22,10 @@ require_once 'modules/mod_accueil/mod_accueil.php';
 require_once 'modules/mod_infos/mod_infos.php';
 require_once 'modules/mod_connexion/mod_connexion.php';
 require_once 'modules/mod_evenement/mod_evenement.php';
+require_once 'modules/mod_a_propos/mod_a_propos.php';
+require_once 'modules/mod_contact/mod_contact.php';
+require_once 'modules/mod_faq/mod_faq.php';
+require_once 'modules/mod_politique/mod_politique.php';
 include_once 'composants/comp_header/comp_header.php';
 include_once 'composants/comp_footer/comp_footer.php';
 include_once 'composants/comp_retour_bouton/comp_bouton.php';
@@ -67,19 +71,19 @@ switch ($actionMenu) {
         break;
     case 'mod_a_propos':
 
-        echo 'alo';
+        $module = New ModAPropos();
         break;
     case 'mod_faq':
 
-        echo 'lkl';
+        $module = New ModFAQ();
         break;
     case 'mod_contact':
 
-        echo 'aloa';
+        $module = New ModContact();
         break;
     case 'mod_politique':
 
-        echo 'lkla';
+        $module = New ModPolitique();
         break;
     default:
 

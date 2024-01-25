@@ -20,5 +20,3 @@ class ModInfos {
         return $this -> contInfos -> getAffichage();
     }
 }
-
-?>

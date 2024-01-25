@@ -4,14 +4,29 @@ include_once 'vue_generique.php';
 
 class VueEvenement extends VueGenerique {
 
-    public function __construct() {
+    public function menu($typesEvent) {
 
+        echo '<div class="d-flex flex-column justify-content-center align-items-center">';
 
-    }
+            echo '<a href="index.php?module=mod_evenement&&action=tous_les_events">';
+                echo '<button type="button" class="custom-btn btn btn-primary custom-btn-eventPage">Tous les events</button>';
+            echo '</a>';
+        echo '</div>';
 
-    public function menu() {
+        echo '<div class="row mt-xl-2 borderPageEvent">';
+            echo '<div class="col-xl-12 d-flex justify-content-center mt-xl-2 ligneDesTypesDeEvents">';
 
-        include_once 'page_event.html';
+        foreach ($typesEvent as $type) {
+
+                echo '<a href="index.php?module=mod_evenement&&action='.htmlspecialchars($type['type']).'">';
+                    echo '<button type="button" class="custom-btn btn btn-primary me-xl-4 custom-btn-eventPage">';
+                        echo $type['type'];
+                    echo '</button>';
+                echo '</a>';
+        }
+
+            echo '<div>';
+        echo '</div>';
     }
 
     function affichageDesEventsRetournes($type) {
@@ -23,7 +38,7 @@ class VueEvenement extends VueGenerique {
 
         foreach ($type as $event) {
 
-            echo "<div class='col-md-4 col-sm-6'>";
+            echo "<div class='col-xl-4 col-lg-6 col-md-6 col-sm-12'>";
             echo "<div class='card mb-3 vignetteEvent'>";
 
             if (isset($event['logo']) && $event['logo'] != '') {

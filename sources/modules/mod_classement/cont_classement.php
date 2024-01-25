@@ -19,18 +19,17 @@ class ContClassement {
     }
 
     public function exec() {
-        
-        $this -> vueClassement -> menu();
+
+        if (session_status() == PHP_SESSION_NONE) {
+
+            session_start();
+        }
         switch($this -> actionClassement) {
-            case 'bienvenue' :
-                
-                $this -> vueClassement -> bienvenue();
-                break;
-            case 'nbKills':
+            case 'eliminations':
 
                 $this -> vueClassement -> affiche_liste($this -> modeleClassement -> classementJoueursParNbKills());
                 break;
-            case 'tempsDeJeu':
+            case 'temps':
 
                 $this -> vueClassement -> affiche_liste($this -> modeleClassement -> classementJoueursParTempsJeu());
                 break;
@@ -38,13 +37,24 @@ class ContClassement {
 
                 $this -> vueClassement -> affiche_liste($this -> modeleClassement -> classementJoueursParRatio());
                 break;
-            case 'nbMorts':
+            case 'morts':
 
                 $this -> vueClassement -> affiche_liste($this -> modeleClassement -> classementJoueursParNbMorts());
                 break;
-            case 'nbPartiesJouees':
+            case 'parties':
 
                 $this -> vueClassement -> affiche_liste($this -> modeleClassement -> classementJoueursParNbPartiesJouees());
+                break;
+            default:
+
+                if (isset($_SESSION['user'])) {
+
+                    $userInfo = $this -> modeleClassement-> retourneClassementDuJoueurConnecte($_SESSION['user']);
+                } else {
+
+                    $userInfo = null;
+                }
+                $this -> vueClassement -> menu($this -> modeleClassement -> filtres(), $userInfo);
                 break;
         }
     }

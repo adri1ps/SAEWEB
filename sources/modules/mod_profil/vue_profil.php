@@ -1,5 +1,6 @@
 <?php
 
+
 include_once 'vue_generique.php';
 
 class VueProfil extends VueGenerique {
@@ -8,13 +9,11 @@ class VueProfil extends VueGenerique {
 
     }
 
-    public function menu() {
+    public function page_profil($user) {
+        $nom = $user['nom'];
+        $email = $user['email'];
+        $biographie = $user['biographie'];
 
-        include_once 'page_profil_visu.html';
-    }
-
-    public function page_profil() {
-
-        include_once 'page_profil_visu.html';
+        include_once 'form_profil.php';
     }
 }
