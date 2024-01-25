@@ -22,6 +22,7 @@ class ContForum {
         switch ($this->actionForum) {
             case "poster":
                 $this->ajoutMsg();
+                header('Location:index.php?module=mod_forum');
             break;
         
         }

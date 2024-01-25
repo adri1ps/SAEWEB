@@ -16,7 +16,7 @@ class VueForum extends VueGenerique {
             <ol class="list-group">
                 <?php foreach ($tab as $values): ?>
 
-                <li class="list-group-item mb-4">
+                <li class="list-group-item mb-4 shadow-lg p-3 mb-5 bg-white rounded">
                     <h3><?php echo $values['topic'] ?></h3>
                     <p>Publié le <?php echo $values['date']." par ".$values['nom']?></p>
                     <?php echo "Contenu : " . $values['contenu'] ?>
