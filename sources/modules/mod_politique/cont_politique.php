@@ -23,7 +23,7 @@ class ContPolitique {
         switch($this -> actionPolitique) {
             default:
 
-                $this -> vuePolitique -> menu();
+                $this -> vuePolitique -> menu($this -> modelePolitique -> retourneLesTextesEnFonctionDuTypeChoisi('politiqueTitre'), $this -> modelePolitique -> retourneLesTextesEnFonctionDuTypeChoisi('politiqueTexte'));
                 break;
 
         }
