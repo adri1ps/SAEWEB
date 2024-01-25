@@ -1,14 +1,17 @@
 <div class="container">
-    <form id="formProfil" action="index.php?module=mod_profil&&action=modifierProfil" method="POST">
+    <form id="formProfil" action="index.php?module=mod_profil&&action=modification" method="POST">
         <h2>MODIFICATION</h2>
-
         <div class="form-group">
             <label for="nom">Nouveau nom:</label>
-            <input type="text" id="nom" name="nomModif" required placeholder="Legagnant56">
+            <input type="text" id="nom" name="nomModif" required placeholder="Legagnant56" value="<?php echo $nom; ?>">
         </div>
         <div class="form-group">
             <label for="email">Nouvel email:</label>
-            <input type="email" id="email" name="emailModif" required placeholder="legagnant56@gmail.com">
+            <input type="email" id="email" name="emailModif" required placeholder="legagnant56@gmail.com" value="<?php echo $email; ?>">
+        </div>
+        <div class="form-group">
+            <label for="bio">Nouvel email:</label>
+            <input type="text" id="bio" name="bioModif" required placeholder="Je suis legagnant56" value="<?php echo $biographie; ?>">
         </div>
         <div class="form-group">
             <label for="mdpDeModif">Nouveau mot de passe:</label>
@@ -19,7 +22,8 @@
             <input type="password" id="mdpConfirm" name="mdpConfirmModif" required placeholder="************">
         </div>
         <div class="form-group">
-
+            <label for="mdpModif">Entrez votre mot de passe actuel :</label>
+            <input type="password" id="reelMdp" name="reelmdpModif" required placeholder="************">
         </div>
         <button type="submit">Enregistrer</button>
         <div class="form-footer">
@@ -50,7 +54,7 @@
         margin-bottom: 5px;
         font-family: Roboto, sans-serif;
     }
-    #formProfil.form-group input[type="text"],
+    #formProfil .form-group input[type="text"],
     #formProfil .form-group input[type="email"],
     #formProfil .form-group input[type="password"] {
         width: 90%;

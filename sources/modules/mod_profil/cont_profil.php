@@ -22,12 +22,14 @@ class ContProfil {
     public function exec() {
         switch($this -> actionProfil) {
             case 'afficherProfil':
-
                 $this -> afficherProfil();
                 break;
             case 'modifierProfil':
-
                 $this -> modifierProfil();
+                break;
+            case 'modification':
+                $this -> applicationModif();
+                $this -> changerNomSession();
                 break;
         }
 
@@ -42,6 +44,11 @@ class ContProfil {
         $userInfo = $this->getInfoUser();
         $this -> vueProfil -> modif_profil($userInfo);
     }
+
+    public function applicationModif(){
+        $this -> modeleProfil -> modifier($this ->getInfoUser());
+    }
+
     public function getInfoUser(){
         return $this -> modeleProfil -> infosJoueurs();
     }
@@ -49,5 +56,9 @@ class ContProfil {
     public function getAffichage() {
 
         return $this -> vueProfil -> getAffichage();
+    }
+
+    public function changerNomSession(){
+        $_SESSION['user'] = $_POST['nomModif'];
     }
 }

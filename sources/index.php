@@ -40,10 +40,6 @@ switch ($actionMenu) {
 
         $module = New ModProfil();
         break;
-    case 'mod_modif_profil':
-
-        $module = New ModModifProfil();
-        break;
     case 'mod_connexion':
 
         $module = New ModConnexion();

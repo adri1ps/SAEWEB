@@ -26,7 +26,7 @@ class ModeleInscription extends Connexion {
             else {
 
                 $hashed_password = password_hash($user_password, PASSWORD_DEFAULT);
-                $query = self :: $bdd -> prepare("INSERT INTO Joueurs (nom, mot_de_passe, tempsDeJeu, email, abonnement, ratio, nbKills, nbMorts, nbPartiesJouees, biographie) 
+                $query = self :: $bdd -> prepare("INSERT INTO Joueurs (nom, mot_de_passe, temps, email, abonnement, ratio, eliminations, morts, parties, biographie) 
                 VALUES (:user, :mdp, 12, :courriel, 12, 2.5, 12, 21, 2, 'je suis un nouvel utilisateur...')");
                 $query -> bindValue(':user', $user_name);
                 $query -> bindValue(':mdp', $hashed_password);

@@ -5,13 +5,20 @@
     font-family: Avenir;
     border-radius: 25px 25px 25px 25px;
     background-color: #031633;
-
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .profil-container {
     width: 100%;
     height: 100%;
     display: flex;
     color: white;
+}
+@media screen and (max-width: 1200px) {
+    .profil-container {
+        width: 100%;
+        height: 100%;
+        color: white;
+    }
 }
 .profil h1{
     display: flex;
@@ -23,7 +30,7 @@ nav {
     margin-right: 3%;
     margin-bottom: 2%;
     text-align: center;
-    width: auto; /* Définissez la largeur souhaitée pour la balise <nav> à gauche */
+    width: auto;
 
 }
 
@@ -43,17 +50,23 @@ nav {
     display: block;
 }
 section {
-    flex: 1; /* La balise <section> utilise le reste de l'espace disponible dans le conteneur flex */
+    flex: 1;
     margin-left: 1%;
-
-    padding: 20px; /* Ajoutez des marges intérieures ou ajustez selon vos besoins */
+    color: white;
+    padding: 20px;
     border-radius: 10px;
 }
-
+.valeurs-recuperees {
+    display: flex;
+}
 section p {
     color: white;
 }
 
+.statistique {
+    margin-left: 10%;
+    color: white;
+}
 
 /*--------------------------------------------AFFICHAGE DES EVENTS-------------------------------------*/
 
