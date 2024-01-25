@@ -23,7 +23,9 @@ class ContForum {
             case "poster":
                 $this->ajoutMsg();
             break;
-        
+            case "mesMessages":
+                $this->getAffichageMsg();
+            break ;
         }
     }
 
@@ -35,7 +37,15 @@ class ContForum {
        
     }
 
+    public function getAffichageMsg() {
+       
+        $tab = $this->modeleForum->lesMessagesDujoueurDelaSession();
+        $this->vueForum->affiche_liste_msg($tab);
+        
+    }
+
     
+
 
 
     public function formMessage() {

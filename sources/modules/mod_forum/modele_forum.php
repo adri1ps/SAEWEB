@@ -7,8 +7,6 @@ class ModeleForum extends Connexion {
     public function __construct() {}
 
 
-
-
     public function getListeMessageAvecInfoJoueur() {
         $query = self::$bdd->prepare("SELECT Message.*, Joueurs.nom  FROM Message
                                       INNER JOIN Joueurs ON Joueurs.idJoueur = Message.idJoueur");
@@ -17,6 +15,26 @@ class ModeleForum extends Connexion {
         return $tab;
     }
     
+
+    public function lesMessagesDujoueurDelaSession(){
+        if (isset($_SESSION['user'])) {
+            $login = $_SESSION['user'];
+            $idJoueur = $this->getIdJoueurFromLogin($login);
+    
+            $query = self::$bdd->prepare("SELECT Message.*, Joueurs.nom FROM Message
+                INNER JOIN Joueurs ON Joueurs.idJoueur = Message.idJoueur
+                WHERE Joueurs.nom = :nom");
+            $query->bindParam(':nom', $login, PDO::PARAM_STR);
+            $query->execute();
+    
+            $tab = $query->fetchAll();
+            return $tab;
+        }
+        
+        return false;
+    }
+
+
 
 
     public function insertMessage() {
