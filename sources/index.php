@@ -16,6 +16,7 @@
 
 require_once 'modules/mod_classement/mod_classement.php';
 require_once 'modules/mod_inscription/mod_inscription.php';
+require_once 'modules/mod_statistique/mod_statistique.php';
 require_once 'modules/mod_forum/mod_forum.php';
 require_once 'modules/mod_profil/mod_profil.php';
 require_once 'modules/mod_accueil/mod_accueil.php';
@@ -40,6 +41,10 @@ switch ($actionMenu) {
     case 'mod_profil':
 
         $module = New ModProfil();
+        break;
+    case 'mod_statistique':
+
+        $module = New ModStatistique();
         break;
     case 'mod_connexion':
 

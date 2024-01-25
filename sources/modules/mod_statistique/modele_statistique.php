@@ -9,11 +9,11 @@ class ModeleStatistique extends Connexion {
 
     }
 
-    public function statsJoueurs($user) {
-
+    public function statsJoueurs() {
+        $user = $_SESSION['user'];
         $query = self :: $bdd -> prepare('SELECT * FROM Joueurs WHERE nom = :nom');
-                $query -> bindParam(':nom', $user, PDO::PARAM_STR);
-                $query -> execute();
+        $query -> bindParam(':nom', $user, PDO::PARAM_STR);
+        $query -> execute();
 
                 return $query -> fetch(PDO::FETCH_ASSOC);
 

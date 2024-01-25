@@ -9,12 +9,12 @@ class VueStatistique extends VueGenerique {
     }
 
 
-    public function page_statistique() {
+    public function page_statistique($user) {
         $abonnement = $user['abonnement'];
-        $ration = $user['ratio'];
-        $nbKills = $user['nbKills'];
-        $nbMorts = $user['nbMorts'];
-        $nbPartiesJouees = $user['nbPartiesJouees'];
+        $ratio = $user['ratio'];
+        $nbKills = $user['eliminations'];
+        $nbMorts = $user['morts'];
+        $nbPartiesJouees = $user['parties'];
 
         include_once 'form_statistique.php';
     }

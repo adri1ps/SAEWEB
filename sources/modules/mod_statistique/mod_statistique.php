@@ -11,7 +11,7 @@ class ModStatistique{
 
         Connexion :: initConnexion();
 
-        $this -> contStatistique = new contStatistique();
+        $this -> contStatistique = new ContStatistique();
         $this -> contStatistique -> exec();
     }
 

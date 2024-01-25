@@ -12,7 +12,7 @@
             <p> <?php echo $biographie; ?> </p>
         </div>
         <div class="lien-vers-page">
-            <a href="lien_vers_autre_page.php">Lien vers une autre page</a>
+            <a href="index.php?module=mod_statistique">Statistique</a>
         </div>
         <div class="valeurs-recuperees">
             <h2>Valeurs récupérées</h2>

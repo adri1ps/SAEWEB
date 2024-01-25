@@ -3,15 +3,12 @@
         <tr>
             <td>
                 <ul>
-                    <li>Abonnement : </li>
-                    <li>Ration : </li>
-                    <li>Nombre de kills : </li>
-                    <li>Nombre de morts : </li>
-                    <li>Nombre de parties jouée : </li>
+                    <li>Abonnement : <?php echo $abonnement; ?> </li>
+                    <li>Ration : <?php echo $ratio; ?></li>
+                    <li>Nombre de kills : <?php echo $nbKills; ?></li>
+                    <li>Nombre de morts : <?php echo $nbMorts; ?></li>
+                    <li>Nombre de parties jouée : <?php echo $nbPartiesJouees; ?></li>
                 </ul>
-            </td>
-            <td>
-                <!-- Mettre le code pour récupérées les données -->
             </td>
         </tr>
     </table>

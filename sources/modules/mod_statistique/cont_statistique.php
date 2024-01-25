@@ -19,19 +19,9 @@ class ContStatistique {
     }
 
     public function exec() {
-        $user = $_SESSION['user'];
-        $userStat = $this -> modeleStatistique -> statsJoueurs($user);
+        $userStat = $this -> modeleStatistique -> statsJoueurs();
         $this -> vueStatistique -> page_statistique($userStat);
 
-        /*
-        $this -> vueStatistique -> menu();
-        switch($this -> actionStatistique) {
-            case 'page_statistique' :
-
-                $this -> vueStatistique -> page_statistique();
-                break;
-        }
-        */
     }
 
     public function getAffichage() {
