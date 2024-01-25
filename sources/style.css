@@ -422,3 +422,42 @@ input[type="submit"] {
     margin-top: 150px;
 }
 
+
+/*-------------------------------------------PAGE CONTACT--------------------------------------------*/
+
+.containerAccueilPageContact {
+
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+}
+.headerPageContact {
+
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+.titreContact {
+
+    font-size: 24px;
+    color: #333;
+}
+.sousTitreContact {
+
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+.texteContact {
+
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 10px 0 20px;
+}
+.sectionPageContact {
+
+    margin-bottom: 30px;
+}
+
+

@@ -46,4 +46,3 @@ class ContInfos {
         return $this -> vueInfos -> getAffichage();
     }
 }
-?>
