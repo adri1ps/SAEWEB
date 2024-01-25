@@ -23,6 +23,7 @@ class ContPolitique {
         switch($this -> actionPolitique) {
             default:
 
+                $this -> vuePolitique -> menu();
                 break;
 
         }

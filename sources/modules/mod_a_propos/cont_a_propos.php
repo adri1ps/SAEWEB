@@ -15,7 +15,6 @@ class ContAPropos {
         $this -> modeleAPropos = new ModeleAPropos();
         $this -> vueAPropos = new VueAPropos();
         $this -> actionAPropos = isset($_GET['action']) ? $_GET['action'] : 'Bienvenue sur la page';
-
     }
 
     public function exec() {
@@ -23,8 +22,8 @@ class ContAPropos {
         switch($this -> actionAPropos) {
             default:
 
+                $this -> vueAPropos -> menu();
                 break;
-
         }
     }
 
