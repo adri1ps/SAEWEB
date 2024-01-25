@@ -51,8 +51,6 @@ class ContInscription {
     }
 
     public function connexion() {
-
-
         $_SESSION['user'] = $_POST['nomInsc'];
     }
 }

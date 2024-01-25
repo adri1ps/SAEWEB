@@ -20,10 +20,30 @@ class ContProfil {
     }
 
     public function exec() {
-        $user = $_SESSION['user'];
-        $userInfo = $this -> modeleProfil -> infosJoueurs($user);
-        $this -> vueProfil -> page_profil($userInfo);
+        switch($this -> actionProfil) {
+            case 'afficherProfil':
 
+                $this -> afficherProfil();
+                break;
+            case 'modifierProfil':
+
+                $this -> modifierProfil();
+                break;
+        }
+
+    }
+
+    public function afficherProfil(){
+        $userInfo = $this->getInfoUser();
+        $this -> vueProfil -> page_profil($userInfo);
+    }
+
+    public function modifierProfil(){
+        $userInfo = $this->getInfoUser();
+        $this -> vueProfil -> modif_profil($userInfo);
+    }
+    public function getInfoUser(){
+        return $this -> modeleProfil -> infosJoueurs();
     }
 
     public function getAffichage() {

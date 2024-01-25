@@ -9,13 +9,13 @@ class ModeleConnexion extends Connexion {
 
     }
 
+
     public function autorisationConnexion() {
 
         if ($this -> loginEtMdpPasVide()) {
 
             $user_name = htmlspecialchars($_POST['login']);
             $user_password = htmlspecialchars($_POST['mdp']);
-    
            
             $query = self :: $bdd -> prepare("SELECT mot_de_passe FROM Joueurs WHERE nom = :login");
             $query -> bindParam(':login', $user_name, PDO::PARAM_STR);
@@ -25,7 +25,6 @@ class ModeleConnexion extends Connexion {
             $mdpHashed = $row['mot_de_passe'];
     
             if ($row && password_verify($user_password, $mdpHashed)) {
-    
                 $_SESSION['user'] = $user_name;
                 return true; 
             }

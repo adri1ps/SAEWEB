@@ -13,7 +13,6 @@
 <body class="d-flex flex-column">
 
 <?php
-/**/
 require_once 'modules/mod_classement/mod_classement.php';
 require_once 'modules/mod_inscription/mod_inscription.php';
 require_once 'modules/mod_forum/mod_forum.php';
@@ -40,6 +39,10 @@ switch ($actionMenu) {
     case 'mod_profil':
 
         $module = New ModProfil();
+        break;
+    case 'mod_modif_profil':
+
+        $module = New ModModifProfil();
         break;
     case 'mod_connexion':
 
