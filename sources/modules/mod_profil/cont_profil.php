@@ -4,6 +4,7 @@ include_once 'modele_profil.php';
 include_once 'vue_profil.php';
 include_once 'Connexion.php';
 
+
 class ContProfil {
 
     private $modeleProfil;
@@ -19,13 +20,45 @@ class ContProfil {
     }
 
     public function exec() {
-        $user = $_SESSION['user'];
-        $userInfo = $this -> modeleProfil -> infosJoueurs($user);
+        switch($this -> actionProfil) {
+            case 'modifierProfil':
+                $this -> modifierProfil();
+                break;
+            case 'modification':
+                $this -> applicationModif();
+                $this -> changerNomSession();
+                break;
+            default:
+                $this -> afficherProfil();
+                break;
+        }
+
+    }
+
+    public function afficherProfil(){
+        $userInfo = $this->getInfoUser();
         $this -> vueProfil -> page_profil($userInfo);
+    }
+
+    public function modifierProfil(){
+        $userInfo = $this->getInfoUser();
+        $this -> vueProfil -> modif_profil($userInfo);
+    }
+
+    public function applicationModif(){
+        $this -> modeleProfil -> modifier($this ->getInfoUser());
+    }
+
+    public function getInfoUser(){
+        return $this -> modeleProfil -> infosJoueurs();
     }
 
     public function getAffichage() {
 
         return $this -> vueProfil -> getAffichage();
+    }
+
+    public function changerNomSession(){
+        $_SESSION['user'] = $_POST['nomModif'];
     }
 }
