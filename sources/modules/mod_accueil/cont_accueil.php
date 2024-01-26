@@ -3,7 +3,7 @@
 include_once 'modele_accueil.php';
 include_once 'vue_accueil.php';
 include_once 'Connexion.php';
-
+/**/
 class ContAccueil {
 
     private $modeleAccueil;
