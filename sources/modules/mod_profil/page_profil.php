@@ -1,10 +1,10 @@
 <div class="profil">
-    <h1 class="titrePageProfil">Profil</h1>
+    <h1>Profil</h1>
     <div class="profil-container">
-        <section class="sectionPageProfil">
+        <section>
             <div class="biographie">
                 <h2><?php echo $nom; ?></h2>
-                <p class="textePageProfil"> <?php echo $biographie; ?></p>
+                <p> <?php echo $biographie; ?></p>
             </div>
             <div class="valeurs-recuperees">
                 <div class="Historique-victoire">
@@ -21,7 +21,7 @@
                     <h4>Statistiques :</h4>
                     <ul>
                         <li>Abonnement : <?php echo $abonnement; ?> </li>
-                        <li>Ration : <?php echo $ratio; ?></li>
+                        <li>Ratio : <?php echo $ratio; ?></li>
                         <li>Nombre de kills : <?php echo $nbKills; ?></li>
                         <li>Nombre de morts : <?php echo $nbMorts; ?></li>
                         <li>Nombre de parties jouée : <?php echo $nbPartiesJouees; ?></li>
@@ -29,12 +29,12 @@
                 </div>
             </div>
         </section>
-        <nav class="navPageProfil">
+        <nav>
             <div class="image-container">
                 <img src="ressources/<?php echo $pp; ?>" alt="Photo de profil" class="photo-profil">
             </div>
             <div class="infos-utilisateur">
-                <p class="textePageProfil"><?php echo $email; ?></p>
+                <p><?php echo $email; ?></p>
                 <h5> Temps de jeu : <?php echo $temps?>h</h5>
             </div>
         </nav>
