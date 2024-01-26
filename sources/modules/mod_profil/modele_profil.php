@@ -72,7 +72,7 @@ class ModeleProfil extends Connexion {
         else{
             return false;
         }
-        }
+    }
     public function verifValeursAuto($valeur2,$valeur3){
         $valeur2 = trim($valeur2);
         if ($valeur2 == ''){

@@ -26,7 +26,7 @@
             <input type="password" id="reelMdp" name="reelmdpModif" required placeholder="************">
         </div>
         <div class="form-group">
-        <label for="ppModif">Nouvelle photo de profile :</label>
+            <label for="ppModif">Nouvelle photo de profile :</label>
             <input type="file" id="ppModif" name="ppModif" accept="image/*">
         </div>
         <button type="submit">Enregistrer</button>

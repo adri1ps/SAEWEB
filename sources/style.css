@@ -6,7 +6,6 @@
     border-radius: 25px 25px 25px 25px;
     background-color: #031633;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 120px;
 }
 .profil-container {
     width: 100%;
@@ -16,19 +15,18 @@
 }
 @media screen and (max-width: 1200px) {
     .profil-container {
-
         width: 100%;
         height: 100%;
         color: white;
     }
 }
-.titrePageProfil {
+.profil h1{
     display: flex;
     justify-content: center;
     background-color: #ffffff;
     margin-top: 1%;
 }
-.navPageProfil {
+nav {
     margin-right: 3%;
     margin-bottom: 2%;
     text-align: center;
@@ -43,7 +41,6 @@
     border-radius: 50%;
     overflow: hidden;
 }
-
 .photo-profil {
     width: 100%;
     height: 100%;
@@ -51,7 +48,7 @@
     border-radius: 50%;
     display: block;
 }
-.sectionPageProfil {
+section {
     flex: 1;
     margin-left: 1%;
     color: white;
@@ -61,7 +58,7 @@
 .valeurs-recuperees {
     display: flex;
 }
-.textePageProfil {
+section p {
     color: white;
 }
 
@@ -69,7 +66,9 @@
     margin-left: 10%;
     color: white;
 }
-
+.container-profil-page {
+    margin-top: 200px;
+}
 /*--------------------------------------------AFFICHAGE DES EVENTS-------------------------------------*/
 
 .containerEvent {
