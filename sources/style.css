@@ -280,3 +280,6 @@ input[type="texteConnexion"], input[type="passwordConnexion"] {
     text-align: center;
 }
 
+.container-profil-page {
+    margin-top: 200px;
+}

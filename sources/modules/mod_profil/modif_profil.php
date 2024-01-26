@@ -1,5 +1,5 @@
-<div class="container">
-    <form id="formProfil" action="index.php?module=mod_profil&&action=modification" method="POST">
+<div class="container-profil-page">
+    <form id="formProfil" action="index.php?module=mod_profil&&action=modification" method="POST" enctype="multipart/form-data">
         <h2>MODIFICATION</h2>
         <div class="form-group">
             <label for="nom">Nouveau nom:</label>
@@ -25,12 +25,19 @@
             <label for="mdpModif">Entrez votre mot de passe actuel :</label>
             <input type="password" id="reelMdp" name="reelmdpModif" required placeholder="************">
         </div>
+        <div class="form-group">
+        <label for="ppModif">Nouvelle photo de profile :</label>
+            <input type="file" id="ppModif" name="ppModif" accept="image/*">
+        </div>
         <button type="submit">Enregistrer</button>
         <div class="form-footer">
             Vous avez un problème ? <a href="index.php?module=mod_faq">FAQ</a>
         </div>
     </form>
 </div>
+<script>
+
+</script>
 <style>
 
     #formProfil {
