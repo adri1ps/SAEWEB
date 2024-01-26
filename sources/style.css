@@ -15,13 +15,6 @@
     display: flex;
     color: white;
 }
-@media screen and (max-width: 1200px) {
-    .profil-container {
-        width: 100%;
-        height: 100%;
-        color: white;
-    }
-}
 .profil h1{
     display: flex;
     justify-content: center;
@@ -35,7 +28,6 @@ nav {
     width: auto;
 
 }
-
 .image-container {
     width: 250px;
     height: 250px;
@@ -43,6 +35,7 @@ nav {
     border-radius: 50%;
     overflow: hidden;
 }
+
 .photo-profil {
     width: 100%;
     height: 100%;
@@ -71,6 +64,7 @@ section p {
 .container-profil-page {
     margin-top: 200px;
 }
+
 /*--------------------------------------------AFFICHAGE DES EVENTS-------------------------------------*/
 
 .containerEvent {

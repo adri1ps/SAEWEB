@@ -34,6 +34,10 @@ class ModeleProfil extends Connexion {
             move_uploaded_file($_FILES['ppModif']['tmp_name'], $destination . $fileName);
             $filePath = $destination . $fileName;
             file_put_contents('chemin_image.txt', $filePath);
+            $fileSupp =$destination . $user['photoProfil'];
+            if (file_exists($fileSupp)){
+                unlink($fileSupp);
+            }
 
             $_POST['nomModif'] = $user_name;
 
