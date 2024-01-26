@@ -20,7 +20,7 @@ class ModeleForum extends Connexion {
             $login = $_SESSION['user'];
             $idJoueur = $this->getIdJoueurFromLogin($login);
 
-            if (isset($_POST['msg']) && isset($_POST['topic'])) {
+            if ((isset($_POST['msg']) && !empty(trim($_POST['msg']))) && (isset($_POST['topic']) && !empty(trim($_POST['topic'])))) {
                 $query = self::$bdd->prepare("INSERT INTO Message(idJoueur,contenu,topic,date) VALUES(?,?,?,NOW())");
                 $query->execute(array(
                     htmlentities($idJoueur),

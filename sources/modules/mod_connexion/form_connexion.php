@@ -23,12 +23,12 @@
                                     <p>Connecter vous à votre compte </p>
 
                                     <div class="form-group">
-                                        <input type="texteConnexion" id="loginDeConnexion" name="login" class="form-control" required placeholder="lewinner44"/>
+                                        <input type="text" id="loginDeConnexion" name="login" class="form-control" required placeholder="lewinner44"/>
                                         <label class="form-label" for="loginDeConnexion">Nom d'utilisateur</label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="passwordConnexion" id="mdp" name="mdp" class="form-control" required placeholder="************"/>
+                                        <input type="password" id="mdp" name="mdp" class="form-control" required placeholder="************"/>
                                         <label class="form-label" for="mdpDeConnexion">Mot de passe</label>
                                     </div>
 

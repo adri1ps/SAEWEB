@@ -27,14 +27,20 @@ class ContProfil {
             case 'modification':
                 $this -> applicationModif();
                 $this -> changerNomSession();
+                header('Location:index.php?module=mod_profil');
                 break;
+            case 'suppression':
+                $this ->supprimerCompte();
+                header('Location:index.php?module=mod_connexion');
             default:
                 $this -> afficherProfil();
                 break;
         }
 
     }
-
+    public function supprimerCompte(){
+        $this -> modeleProfil -> supprimer($this ->getInfoUser());
+    }
     public function afficherProfil(){
         $userInfo = $this->getInfoUser();
         $this -> vueProfil -> page_profil($userInfo);

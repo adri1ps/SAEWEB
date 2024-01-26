@@ -26,13 +26,16 @@
             <input type="password" id="reelMdp" name="reelmdpModif" required placeholder="************">
         </div>
         <div class="form-group">
-            <label for="ppModif">Nouvelle photo de profile :</label>
+            <label for="ppModif">Nouvelle photo de profil :</label>
             <input type="file" id="ppModif" name="ppModif" accept="image/*">
         </div>
-        <button type="submit">Enregistrer</button>
+        <button class="enregistreButton" type="submit">Enregistrer</button>
         <div class="form-footer">
             Vous avez un problème ? <a href="index.php?module=mod_faq">FAQ</a>
         </div>
+    </form>
+    <form style="background-color: white;" action="index.php?module=mod_profil&&action=suppression" method="POST">
+    <button class ="suppButton" type="submit">Supprimer le compte</button>
     </form>
 </div>
 <script>
@@ -77,7 +80,7 @@
         display: flex;
         font-family: Roboto, sans-serif;
     }
-    #formProfil button {
+    #formProfil button.enregistreButton {
         background-color: #007bff;
         color: white;
         padding: 10px 15px;
@@ -88,9 +91,31 @@
         margin-top: 10px;
         outline: none;
     }
-    #formProfil button:hover {
+
+    button.suppButton {
+        display: block;
+        margin: auto; /* Correction ici */
+        background-color: red;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        max-width: 400px;
+        min-width: 400px;
+        margin-top: 10px;
+        outline: none;
+    }
+
+
+    #formProfil button.enregistreButton:hover {
         background-color: #0056b3;
     }
+
+    button.suppButton:hover {
+        background-color: darkred;
+    }
+
     .container .form-footer {
 
         font-family: Roboto, sans-serif;

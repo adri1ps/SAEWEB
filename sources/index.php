@@ -29,6 +29,8 @@ require_once 'modules/mod_politique/mod_politique.php';
 include_once 'composants/comp_header/comp_header.php';
 include_once 'composants/comp_footer/comp_footer.php';
 include_once 'composants/comp_retour_bouton/comp_bouton.php';
+include_once 'composants/comp_up_bouton/comp_bouton_up.php';
+
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -118,6 +120,13 @@ if ($module !== null) {
     </main>
 
     <footer class="border-top">
+        <div id="boutonUp" class="bouton_up">
+            <div class="row justify-content-center">
+                <div class="col-xl-1">
+                    <?php $compUpBouton = New CompUpBouton(); $compUpBouton -> afficheBouton(); ?>
+                </div>
+            </div>
+        </div>
         <?php $compFooter = New CompFooter();    $compFooter -> afficheFooter();?>
     </footer>
 

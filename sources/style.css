@@ -28,7 +28,7 @@
     background-color: #ffffff;
     margin-top: 1%;
 }
-nav {
+.profil nav {
     margin-right: 3%;
     margin-bottom: 2%;
     text-align: center;
@@ -51,7 +51,7 @@ nav {
     border-radius: 50%;
     display: block;
 }
-section {
+.profil section {
     flex: 1;
     margin-left: 1%;
     color: white;
@@ -61,7 +61,7 @@ section {
 .valeurs-recuperees {
     display: flex;
 }
-section p {
+.profil section p {
     color: white;
 }
 
@@ -264,6 +264,14 @@ body {
 
 /*--------------------------------------------FOOTER---------------------------------------------*/
 
+.bouton_up {
+    top: 150px;
+    left: 0;
+    right: 0;
+    z-index: 1029;
+    width: 100%;
+
+}
 footer {
 
     background: radial-gradient(ellipse at center, #0d1d31 0%, #0c0d13 100%);
@@ -282,7 +290,6 @@ main {
 /*--------------------------------------------HEADER---------------------------------------------*/
 
 #boutonRetour {
-
     top: 150px;
     left: 0;
     right: 0;
@@ -552,8 +559,15 @@ input[type="submit"] {
 
 .containerPageFAQ {
 
-    margin-top: 130px !important;
+    border-radius: 10px;
+    margin-top: 50px !important;
+    background: linear-gradient(to right, #001f3f, #7F007F);
+    opacity: 5;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+
 }
+
 
 .boutonFAQ {
 
@@ -565,6 +579,31 @@ input[type="submit"] {
     border: none !important;
     cursor: pointer !important;
 }
+#nomFaq{
+    color: red;
+    font-weight: bold;
+}
+
+.h1Faq{
+    color: #ffffff;
+}
+
+#h5Faq{
+    font-weight: bold;
+
+}
+
+
+#h5Faq:hover {
+    color: blue;
+}
+
+#nomFaq:hover {
+    color: red;
+    font-weight: bold;
+}
+
+
 
 /*-----------------------------------PAGE FORUM-------------------------------------*/
 .containerPageForum {
@@ -590,4 +629,19 @@ input[type="submit"] {
 }
 .h1Forum{
     font-weight: 800;
+}
+
+.h1Forum:hover {
+    color: #007bff;
+}
+
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+#contenu:hover {
+    color: #190f74;
 }

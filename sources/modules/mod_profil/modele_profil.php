@@ -83,4 +83,11 @@ class ModeleProfil extends Connexion {
         }
         return $valeur1;
     }
+    public function supprimer($user){
+        $idJ = $user['idJoueur'];
+        $query = self :: $bdd -> prepare("DELETE FROM Joueurs WHERE idJoueur = :id");
+        $query -> bindValue(':id',$idJ);
+        unset($_SESSION['user']);
+        return $query -> execute();
+    }
 }

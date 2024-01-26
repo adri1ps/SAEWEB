@@ -33,7 +33,7 @@ class ModeleFAQ extends Connexion {
             $login = $_SESSION['user'];
             $idJoueur = $this->getIdJoueurFromLogin($login);
             
-            if (isset($_POST['question'])) {
+            if (isset($_POST['question'])&& !empty(trim($_POST['question']))) {
                 $requete = self::$bdd->prepare('INSERT INTO Faq(date, question, idJoueur) VALUES (NOW(), ?, ?)');
                 $requete->execute(array(htmlspecialchars($_POST['question']), $idJoueur));
                 return true;

@@ -57,6 +57,15 @@ class VueForum extends VueGenerique {
             </form>
         </div>
         <?php
+        echo '<div class="d-inline-block">';
+            if (empty($_SESSION['user'])) {
+
+                $_SESSION['error'] = 'Il faut se connecter pour envoyer un message';
+                $errorMessage = $_SESSION['error'];
+                echo '<div class="alert alert-danger d-flex justify-content-center mx-auto">' . $errorMessage . '</div>';
+                unset($_SESSION['error']);
+            }
+        echo '</div>';
     }
 
 
