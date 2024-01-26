@@ -1,5 +1,5 @@
-<div class="container">
-    <form id="formProfil" action="index.php?module=mod_profil&&action=modification" method="POST">
+<div class="container-profil-page">
+    <form id="formProfil" action="index.php?module=mod_profil&&action=modification" method="POST" enctype="multipart/form-data">
         <h2>MODIFICATION</h2>
         <div class="form-group">
             <label for="nom">Nouveau nom:</label>
@@ -25,12 +25,19 @@
             <label for="mdpModif">Entrez votre mot de passe actuel :</label>
             <input type="password" id="reelMdp" name="reelmdpModif" required placeholder="************">
         </div>
+        <div class="form-group">
+        <label for="ppModif">Nouvelle photo de profile :</label>
+            <input type="file" id="ppModif" name="ppModif" accept="image/*">
+        </div>
         <button type="submit">Enregistrer</button>
         <div class="form-footer">
             Vous avez un problème ? <a href="index.php?module=mod_faq">FAQ</a>
         </div>
     </form>
 </div>
+<script>
+
+</script>
 <style>
 
     #formProfil {
@@ -97,5 +104,19 @@
     .container .form-footer a:hover {
 
         text-decoration: underline;
+    }
+    #formProfil .form-group input[type="file"]{
+        display: inline-block;
+        padding: 8px 12px;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        border: 1px solid #007bff;
+        border-radius: 4px;
+        color: #007bff;
+        background-color: #ffffff;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     }
 </style>

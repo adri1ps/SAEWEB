@@ -8,6 +8,7 @@ class VueProfil extends VueGenerique {
 
     }
 
+
     public function page_profil($user) {
         $nom = $user['nom'];
         $email = $user['email'];

@@ -21,21 +21,21 @@ class ContInfos {
     public function exec() {
 
         switch($this -> actionInfos) {
-            case 'tours':
+            case 'tour':
 
                 $this -> vueInfos -> afficheInfosDesTours($this -> modeleInfos -> retourneInfosDesTours());
                 break;
-            case 'projectiles':
 
-                $this -> vueInfos -> afficheInfosDesProjectiles($this -> modeleInfos -> retourneInfosDesProjectiles());
+            case 'projectile':
+
                 break;
-            case 'soldats':
 
-                $this -> vueInfos -> afficheInfosDesSoldats($this -> modeleInfos -> retourneInfosDesSoldats());
+            case 'soldat':
+
                 break;
             default:
 
-                $this -> vueInfos -> menu($this -> modeleInfos -> retourneLesActeurs());
+                $this -> vueInfos -> menu();
                 break;
 
         }

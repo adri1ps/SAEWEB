@@ -23,11 +23,4 @@ class ModeleEvenement extends Connexion {
         $requete -> execute();
         return $requete -> fetchAll(PDO::FETCH_ASSOC);
     }
-
-    public function retourneLesTypesDeEvents() {
-
-        $requete = self :: $bdd -> prepare('SELECT DISTINCT type FROM Evenement');
-        $requete -> execute();
-        return $requete -> fetchAll(PDO::FETCH_ASSOC);
-    }
 }

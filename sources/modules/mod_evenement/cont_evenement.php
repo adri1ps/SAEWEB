@@ -21,23 +21,23 @@ class ContEvenement {
     public function exec() {
 
         switch($this -> actionEvenement) {
-            case 'Nouvelle saison' :
+            case 'nouvelle_saison' :
 
                 $this -> vueEvenement -> affichageDesEventsRetournes($this -> modeleEvenement -> retournerLesEventsParCategorie("Nouvelle saison"));
                 break;
-            case 'Week-end special' :
+            case 'week-end_special' :
 
-                $this -> vueEvenement -> affichageDesEventsRetournes($this -> modeleEvenement -> retournerLesEventsParCategorie("Week-end special"));
+                $this -> vueEvenement -> affichageDesEventsRetournes($this -> modeleEvenement -> retournerLesEventsParCategorie("Week-end spécial"));
                 break;
-            case 'Nouvelle map' :
+            case 'nouvelle_map' :
 
                 $this -> vueEvenement -> affichageDesEventsRetournes($this -> modeleEvenement -> retournerLesEventsParCategorie("Nouvelle map"));
                 break;
-            case 'Tournoi' :
+            case 'tournoi' :
 
                 $this -> vueEvenement -> affichageDesEventsRetournes($this -> modeleEvenement -> retournerLesEventsParCategorie("Tournoi"));
                 break;
-            case 'Tente ta chance' :
+            case 'tente_ta_chance' :
 
                 $this -> vueEvenement -> affichageDesEventsRetournes($this -> modeleEvenement -> retournerLesEventsParCategorie("Tente ta chance"));
                 break;
@@ -47,7 +47,8 @@ class ContEvenement {
                 break;
             default :
 
-                $this -> vueEvenement -> menu($this -> modeleEvenement -> retourneLesTypesDeEvents());
+                $this -> vueEvenement -> menu();
+                //$this -> vueEvenement -> affichageDesEventsRetournes($this -> modeleEvenement -> retournerTousLesEvents());
                 break;
         }
     }
