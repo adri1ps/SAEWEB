@@ -105,4 +105,18 @@
 
         text-decoration: underline;
     }
+    #formProfil .form-group input[type="file"]{
+        display: inline-block;
+        padding: 8px 12px;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        border: 1px solid #007bff;
+        border-radius: 4px;
+        color: #007bff;
+        background-color: #ffffff;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    }
 </style>
