@@ -14,18 +14,16 @@ class ContFAQ {
 
         $this -> modeleFAQ = new ModeleFAQ();
         $this -> vueFAQ = new VueFAQ();
-        $this -> actionFAQ = isset($_GET['action']) ? $_GET['action'] : 'Bienvenue sur la page';
-
+        
     }
 
     public function exec() {
-
+        $this -> actionFAQ = isset($_GET['action']) ? $_GET['action'] : 'Bienvenue sur la page';
         switch($this -> actionFAQ) {
             case 'poser_question': 
 
                 $this -> modeleFAQ -> insertQuestion();
                 header('Location:index.php?module=mod_faq');
-                exit();
                 break;
             default:
 

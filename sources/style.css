@@ -298,6 +298,20 @@ main {
 }
   
 
+/* style.css */
+.bi-escape {
+    fill: currentColor;
+    width: 60px;
+    height: 60px;
+}
+
+
+.bi-person-square{
+    fill: currentColor;
+    width: 60px;
+    height: 60px;
+}
+
 /*-----------------------------------FORMULAIRE INSCRIPTION-------------------------------------*/
 
 .form-container {
@@ -547,8 +561,14 @@ input[type="submit"] {
 
 .containerPageFAQ {
 
-    margin-top: 130px !important;
+    margin-top: 50px !important;
+    background: linear-gradient(to right, #001f3f, #7F007F); 
+    opacity: 5; 
+    z-index: -1; 
+    transition: opacity 0.3s ease; 
+
 }
+
 
 .boutonFAQ {
 
@@ -560,6 +580,30 @@ input[type="submit"] {
     border: none !important;
     cursor: pointer !important;
 }
+#nomFaq{
+    color: red;
+    font-weight: bold;
+    }
+    
+.h1Faq{
+    color: #ffffff;
+}    
+
+    #h5Faq{
+        font-weight: bold;
+        
+    }
+    
+
+    #h5Faq:hover {
+        color: blue; 
+    }
+    
+    #nomFaq:hover {
+        color: red; 
+        font-weight: bold; 
+    }
+    
 
 /*-----------------------------------PAGE FORUM-------------------------------------*/
 .containerPageForum {
@@ -586,3 +630,20 @@ input[type="submit"] {
 .h1Forum{
     font-weight: 800;
 }
+
+.h1Forum:hover {
+    color: #007bff; 
+}
+
+
+.list-group-item:hover {
+    background-color: #f8f9fa; 
+    transform: scale(1.05); 
+    transition: transform 0.3s ease; 
+}
+
+#contenu:hover {
+    color: #190f74;
+}
+
+
